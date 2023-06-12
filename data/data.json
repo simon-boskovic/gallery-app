@@ -1,0 +1,16 @@
+{
+  "portfolio": [
+    {
+      "title": "Interior photography",
+      "imagesPath": "interior_photography"
+    },
+    {
+      "title": "Real Estate",
+      "imagesPath": "real_estate"
+    },
+    {
+      "title": "Corporate photography",
+      "imagesPath": "corporate_photography"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 3em; /* Adjust as needed */
+  font-weight: bold;
+  color: white;
+
+  /* Additional styling properties */
+}
+
+h2 {
+  font-size: 2.5em; /* Adjust as needed */
+  font-weight: bold;
+  /* Additional styling properties */
+}
+
+h3 {
+  font-size: 1.5em; /* Adjust as needed */
+  font-weight: bold;
+  /* Additional styling properties */
+}
+
+/* Paragraph Styles */
+
+p {
+  font-size: 1.5em; /* Adjust as needed */
+  /* Additional styling properties */
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 4.5em;
+  }
+
+  h2 {
+    font-size: 2.5em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+}
+
+body {
+  background-image: linear-gradient(
+    135deg,
+    #350956,
+    #7b0e61,
+    #c91458,
+    #ff6f91,
+    #ff9671,
+    #ff9671,
+    #ff6f91,
+    #c91458,
+    #7b0e61,
+    #350956
+  );
+  color: white;
+}

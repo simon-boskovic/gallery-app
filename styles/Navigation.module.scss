@@ -1,0 +1,161 @@
+.c-navigation {
+  position: fixed;
+  left: 0%;
+  top: 40px;
+  right: 0%;
+  bottom: auto;
+  width: 100%;
+  padding-right: 40px;
+  padding-left: 40px;
+  background-color: transparent;
+  z-index: 21;
+}
+
+.c-nav-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c-logo-wrapper {
+  will-change: width, height;
+  width: 130px;
+  display: flex;
+  overflow: hidden;
+  width: 130px;
+  height: 60px;
+  align-items: center;
+  border-radius: 50px;
+  background-color: #f2a70c;
+  transition: width 200ms ease;
+}
+
+.c-logo-wrapper--scrolled {
+  width: 60px;
+}
+
+.c-logo {
+  width: 30px;
+  margin-left: 15px;
+}
+
+.c-text-logo {
+  margin-left: 1rem;
+  display: block;
+  width: 60px;
+  transition: opacity 200ms ease;
+  color: white;
+}
+
+.c-text-logo--scrolled {
+  opacity: 0;
+}
+
+.c-menu-button-container {
+  position: relative;
+  border-radius: 4px;
+  background-color: #f2a70c;
+  width: 160px;
+  height: 60px;
+  padding: 0 1rem;
+}
+
+.c-menu-button-wrapper {
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c-menu-toggle-wrap {
+  display: flex;
+  gap: 0.3rem;
+  flex-direction: column;
+}
+
+.c-menu-toggle-wrap div {
+  content: "";
+  position: block;
+  height: 2px;
+  width: 24px;
+  background: white;
+  transition: transform 0.15s ease;
+}
+
+.c-menu-toggle-wrap--is-open {
+  &.c-menu-toggle-wrap div:first-child {
+    position: absolute;
+
+    transform: translateY(0) rotate(45deg);
+  }
+  &.c-menu-toggle-wrap div:nth-child(2) {
+    opacity: 0;
+  }
+  &.c-menu-toggle-wrap div:nth-child(3) {
+    transform: translateY(0) rotate(-45deg);
+    position: absolute;
+  }
+}
+
+.c-menu-navigation {
+  will-change: height;
+  position: absolute;
+  left: 0;
+  width: 160px;
+  top: 58px;
+  background-color: #f2a70c;
+  border-end-end-radius: 24px;
+  border-end-start-radius: 4px;
+  transition: opacity 200ms ease;
+}
+
+.c-menu-navigation a div {
+  color: white;
+  padding: 0.3rem 1rem;
+  text-decoration: underline 0.15em white;
+  text-underline-offset: 0.2em;
+  transition: text-decoration-color 300ms, text-underline-offset 300ms;
+}
+
+.c-menu-text {
+  color: white;
+}
+
+.c-menu-navigation a div:hover {
+  text-decoration-color: rgb(100, 100, 197);
+  text-underline-offset: 0.4em;
+}
+
+.c-menu-navigation--closed {
+  opacity: 0;
+}
+
+.c-menu-navigation a div:last-child {
+  padding-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .c-navigation {
+    position: fixed;
+    left: 0%;
+    top: 40px;
+    right: 0%;
+    bottom: auto;
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: transparent;
+    z-index: 21;
+  }
+}
