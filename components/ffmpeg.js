@@ -3,12 +3,29 @@ import Path from "path";
 import { exec } from "child_process";
 
 export default async function getFileStructure(absolutePath, relativePath) {
-  const compressedFilesDir = `${absolutePath}/compressed`;
+  const compressedDir = `${absolutePath}/compressed`;
+  const placeholderFilesDir = compressedDir + "/placeholders";
+  const imagesFilesDir = compressedDir + "/images";
 
-  return checkFileExists(compressedFilesDir)
+  return checkFileExists(compressedDir)
     .then((dirExist) => {
       if (!dirExist) {
-        return fs.mkdir(compressedFilesDir);
+        return fs.mkdir(compressedDir).then(async (created) => {
+          return Promise.all([
+            checkFileExists(placeholderFilesDir).then(
+              (placeholderDirtExist) => {
+                if (!placeholderDirtExist) {
+                  return fs.mkdir(placeholderFilesDir);
+                }
+              }
+            ),
+            checkFileExists(imagesFilesDir).then((exist) => {
+              if (!exist) {
+                return fs.mkdir(imagesFilesDir);
+              }
+            }),
+          ]);
+        });
       }
       return true;
     })
@@ -20,21 +37,36 @@ export default async function getFileStructure(absolutePath, relativePath) {
       Promise.all(
         files.map((file) => {
           const pathToFile = `${absolutePath}/${file}`;
-          const smallFileName = `${
+          const placeholderFileName = `${
             Path.parse(pathToFile).name
           }-ffmpeg-small.webp`;
+          const imageFileName = `${Path.parse(pathToFile).name}.webp`;
 
-          const smallFilePath = `${compressedFilesDir}/${smallFileName}`;
-          return checkFileExists(smallFilePath).then((fileAlreadyExists) => {
-            if (!fileAlreadyExists) {
-              exec(`ffmpeg -i ${pathToFile}  -vf scale=20:-1 ${smallFilePath}`);
+          const placeholderFilePath = `${placeholderFilesDir}/${placeholderFileName}`;
+          const imageFilePath = `${imagesFilesDir}/${imageFileName}`;
+          return checkFileExists(placeholderFilePath).then(
+            async (placeholderExists) => {
+              if (!placeholderExists) {
+                exec(
+                  `ffmpeg -i ${pathToFile}  -vf scale=20:-1 ${placeholderFilePath}`
+                );
+              }
+              return checkFileExists(imageFilePath).then((imageExists) => {
+                if (!imageExists) {
+                  exec(
+                    `ffmpeg -i ${pathToFile}  -c:v libwebp ${imageFilePath}`
+                  );
+                }
+                return {
+                  image: relativePath + "/compressed/images/" + imageFileName,
+                  smallImage:
+                    relativePath +
+                    "/compressed/placeholders/" +
+                    placeholderFileName,
+                };
+              });
             }
-
-            return {
-              image: relativePath + "/" + file,
-              smallImage: relativePath + "/compressed/" + smallFileName,
-            };
-          });
+          );
         })
       )
     );

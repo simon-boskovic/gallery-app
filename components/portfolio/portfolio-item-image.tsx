@@ -19,12 +19,9 @@ export default function PortfolioItemImage(props) {
   useEffect(() => {
     imgRef.current?.addEventListener("load", () => {
       onLoad();
-      console.log("load2");
     });
 
     if (imgRef.current?.complete) {
-      console.log("load1");
-
       onLoad();
     }
   }, []);
