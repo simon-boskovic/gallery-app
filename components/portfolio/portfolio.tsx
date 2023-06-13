@@ -1,15 +1,11 @@
 "use client";
 
-import Link from "next/link";
 import styles from "../../styles/Portfolio.module.scss";
-import { useState } from "react";
-import FsLightbox from "fslightbox-react";
 import PortfolioItem from "./portfolio-item";
 
 export default function Portoflio(props) {
   const { portfolioResult } = props;
 
-  console.log(portfolioResult);
   return (
     <div className={`${styles["c-portfolio-wrapper"]}`}>
       <h2>Moje práce</h2>

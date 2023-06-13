@@ -27,7 +27,7 @@ export default async function getFileStructure(absolutePath, relativePath) {
           const smallFilePath = `${compressedFilesDir}/${smallFileName}`;
           return checkFileExists(smallFilePath).then((fileAlreadyExists) => {
             if (!fileAlreadyExists) {
-              exec(`ffmpeg -i ${pathToFile} -vf scale=20:-1 ${smallFilePath}`);
+              exec(`ffmpeg -i ${pathToFile}  -vf scale=20:-1 ${smallFilePath}`);
             }
 
             return {

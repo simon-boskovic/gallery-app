@@ -6,7 +6,6 @@ import Link from "next/link";
 
 export default function PortfolioItem(props) {
   const { portfolioItem } = props;
-  console.log(portfolioItem);
   const [maxImagesCount, setMaxImagesCount] = useState(3);
   const [toggler, setToggler] = useState(false);
   const [imageIndex, setImageIndex] = useState(0);
@@ -28,6 +27,8 @@ export default function PortfolioItem(props) {
           return (
             index <= maxImagesCount - 1 && (
               <PortfolioItemImage
+                imageHeight={240}
+                imageWrapperHeight={240}
                 image={res.image}
                 smallImage={res.smallImage}
                 key={index}

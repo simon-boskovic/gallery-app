@@ -1,15 +1,62 @@
-import { useState } from "react";
+"use client";
+import { useEffect, useRef, useState } from "react";
+import React, { Suspense } from "react";
 import styles from "../../styles/Portfolio.module.scss";
+import { Img } from "react-image";
 
 export default function PortfolioItemImage(props) {
   const [isHovered, setIsHovered] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
+  const wrapperRef = useRef<HTMLDivElement>(null);
 
-  const { smallImage, image, setImageIndex, setToggler, index, toggler } =
-    props;
+  function onLoad() {
+    imgRef.current?.classList.add(styles["c-portfolio-image--loaded"]);
+    if (wrapperRef && wrapperRef.current) {
+      wrapperRef.current.style.width = "auto";
+    }
+  }
+
+  useEffect(() => {
+    imgRef.current?.addEventListener("load", () => {
+      onLoad();
+      console.log("load2");
+    });
+
+    if (imgRef.current?.complete) {
+      console.log("load1");
+
+      onLoad();
+    }
+  }, []);
+
+  const {
+    smallImage,
+    image,
+    imageWrapperHeight,
+    imageHeight,
+    setImageIndex,
+    setToggler,
+    index,
+    toggler,
+  } = props;
 
   return (
-    <div className={`${styles["c-portfolio-image-wrapper"]}`}>
-      <img className={`${styles["c-portfolio-image"]}`} src={image} alt="" />
+    <div
+      ref={wrapperRef}
+      className={`${styles["c-portfolio-image-wrapper"]}`}
+      style={{
+        height: imageWrapperHeight + "px",
+        backgroundImage: `url(${smallImage})`,
+        width: imageWrapperHeight + "px",
+      }}
+    >
+      <img
+        loading="lazy"
+        ref={imgRef}
+        src={image}
+        className={`${styles["c-portfolio-image"]}`}
+        style={{ height: imageHeight + "px" }}
+      />
       <div
         className={`${styles["c-portfolio-image-overlay"]} ${
           isHovered ? styles["c-portfolio-image-overlay--show"] : ""

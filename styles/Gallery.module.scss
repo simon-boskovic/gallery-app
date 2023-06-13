@@ -1,0 +1,26 @@
+.c-gallery-wrapper {
+  padding-right: 40px;
+  padding-left: 40px;
+  margin-top: 3rem;
+}
+.c-gallery-images {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .c-gallery-wrapper {
+    width: 100%;
+    max-width: 1360px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+  .c-gallery-images {
+    flex-direction: row;
+  }
+}
