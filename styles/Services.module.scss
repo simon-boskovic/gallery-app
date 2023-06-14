@@ -8,6 +8,10 @@
   margin-left: auto;
 }
 
+.c-service:last-child {
+  flex-shrink: 0;
+}
+
 .c-services-wrapper {
   display: flex;
   flex-direction: row;
@@ -66,6 +70,7 @@
 }
 
 .c-card-info {
+  margin-top: 0.5rem;
   font-size: 16px;
   line-height: 25px;
   max-width: 40px 0;
@@ -78,5 +83,6 @@
   }
   .c-card-body {
     right: 0 !important;
+    backdrop-filter: blur(1.5px);
   }
 }

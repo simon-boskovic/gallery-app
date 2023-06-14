@@ -13,9 +13,14 @@ import Services from "../../components/services";
 
 export default async function HomePage() {
   const dataJsonPath = path.join(process.cwd(), "data", "data.json");
+  const servicesJsonpath = path.join(process.cwd(), "data", "services.json");
 
   const dataJson = await fs
     .readFile(dataJsonPath, "utf-8")
+    .then((res) => JSON.parse(res));
+
+  const servicesJson = await fs
+    .readFile(servicesJsonpath, "utf-8")
     .then((res) => JSON.parse(res));
 
   const portfolioResult: any[] = [];
@@ -57,7 +62,7 @@ export default async function HomePage() {
         <AboutMe></AboutMe>
       </section>
       <section>
-        <Services></Services>
+        <Services services={servicesJson.services}></Services>
       </section>
       <section id="contact">
         <Contact></Contact>
