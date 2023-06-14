@@ -1,6 +1,7 @@
-import fs from "fs/promises";
-import Path from "path";
 import { exec } from "child_process";
+import fs from "fs";
+import fsp from "fs/promises";
+import Path from "path";
 
 export default async function getFileStructure(absolutePath, relativePath) {
   const compressedDir = `${absolutePath}/compressed`;
@@ -10,18 +11,18 @@ export default async function getFileStructure(absolutePath, relativePath) {
   return checkFileExists(compressedDir)
     .then((dirExist) => {
       if (!dirExist) {
-        return fs.mkdir(compressedDir).then(async (created) => {
+        return fsp.mkdir(compressedDir).then(async (created) => {
           return Promise.all([
             checkFileExists(placeholderFilesDir).then(
               (placeholderDirtExist) => {
                 if (!placeholderDirtExist) {
-                  return fs.mkdir(placeholderFilesDir);
+                  return fsp.mkdir(placeholderFilesDir);
                 }
               }
             ),
             checkFileExists(imagesFilesDir).then((exist) => {
               if (!exist) {
-                return fs.mkdir(imagesFilesDir);
+                return fsp.mkdir(imagesFilesDir);
               }
             }),
           ]);
@@ -29,7 +30,7 @@ export default async function getFileStructure(absolutePath, relativePath) {
       }
       return true;
     })
-    .then(() => fs.readdir(absolutePath, { withFileTypes: true }))
+    .then(() => fsp.readdir(absolutePath, { withFileTypes: true }))
     .then((files) =>
       files.filter((file) => file.isFile()).map((file) => file.name)
     )
@@ -73,7 +74,7 @@ export default async function getFileStructure(absolutePath, relativePath) {
 }
 
 function checkFileExists(file) {
-  return fs
+  return fsp
     .access(file, fs.constants.F_OK)
     .then(() => true)
     .catch(() => false);

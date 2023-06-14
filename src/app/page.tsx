@@ -1,13 +1,13 @@
-import path from "path";
-import Head from "next/head";
+import fs from "fs/promises";
 import { Poppins } from "next/font/google";
-import NavBar from "../../components/nav-bar";
-import Hero from "../../components/hero";
-import Portoflio from "../../components/portfolio/portfolio";
-import Footer from "../../components/footer";
+import Head from "next/head";
+import path from "path";
 import AboutMe from "../../components/about-me";
 import Contact from "../../components/contact";
-import fs from "fs/promises";
+import Footer from "../../components/footer";
+import Hero from "../../components/hero";
+import NavBar from "../../components/nav-bar";
+import Portoflio from "../../components/portfolio/portfolio";
 
 import getFileStructure from "../../components/ffmpeg";
 

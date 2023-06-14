@@ -2,6 +2,7 @@
   padding-right: 40px;
   padding-left: 40px;
   margin-top: 3rem;
+  width: 100%;
 }
 
 .c-portfolio-description {
@@ -111,7 +112,7 @@
 @media (min-width: 768px) {
   .c-portfolio-wrapper {
     width: 100%;
-    width: 1360px;
+    max-width: 1360px;
     margin-right: auto;
     margin-left: auto;
     padding-right: 5%;

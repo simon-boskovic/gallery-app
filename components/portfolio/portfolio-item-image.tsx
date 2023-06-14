@@ -1,8 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import React, { Suspense } from "react";
 import styles from "../../styles/Portfolio.module.scss";
-import { Img } from "react-image";
 
 export default function PortfolioItemImage(props) {
   const [isHovered, setIsHovered] = useState(false);
