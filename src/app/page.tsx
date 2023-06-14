@@ -1,5 +1,4 @@
 import fs from "fs/promises";
-import { Poppins } from "next/font/google";
 import Head from "next/head";
 import path from "path";
 import AboutMe from "../../components/about-me";
@@ -10,8 +9,8 @@ import NavBar from "../../components/nav-bar";
 import Portoflio from "../../components/portfolio/portfolio";
 
 import getFileStructure from "../../components/ffmpeg";
+import Services from "../../components/services";
 
-const poppins = Poppins({ subsets: ["devanagari"], weight: "400" });
 export default async function HomePage() {
   const dataJsonPath = path.join(process.cwd(), "data", "data.json");
 
@@ -48,27 +47,21 @@ export default async function HomePage() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className={` ${poppins.className}`}>
-        <section>
-          <NavBar></NavBar>
-        </section>
-        <section>
-          <Hero></Hero>
-        </section>
-        <section id="portfolio">
-          <Portoflio portfolioResult={portfolioResult}></Portoflio>
-        </section>
-        <section id="about-me">
-          <AboutMe></AboutMe>
-        </section>
-        <section id="contact">
-          <Contact></Contact>
-        </section>
-        <section>
-          <Footer></Footer>
-        </section>
-      </main>
+      <section>
+        <Hero></Hero>
+      </section>
+      <section id="portfolio">
+        <Portoflio portfolioResult={portfolioResult}></Portoflio>
+      </section>
+      <section id="about-me">
+        <AboutMe></AboutMe>
+      </section>
+      <section>
+        <Services></Services>
+      </section>
+      <section id="contact">
+        <Contact></Contact>
+      </section>
     </>
   );
 }

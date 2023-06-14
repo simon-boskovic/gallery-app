@@ -72,4 +72,9 @@ body {
     #350956
   );
   color: white;
+  height: 100%;
+}
+
+.fslightbox-open {
+  height: auto !important;
 }

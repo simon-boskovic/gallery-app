@@ -19,6 +19,9 @@ export default function GalleryItem(props) {
 
   return (
     <div className={styles["c-gallery-images"]}>
+      <div className={styles["c-gallery-heading"]}>
+        <h1>Rád zachycuji nejlepší okamžiky</h1>
+      </div>
       {resolvedImages.map((res, index) => {
         return (
           <PortfolioItemImage
@@ -37,7 +40,7 @@ export default function GalleryItem(props) {
       <FsLightbox
         toggler={toggler}
         sourceIndex={imageIndex}
-        sources={resolvedImages.map((res) => res.image)}
+        sources={resolvedImages.map((res) => res.lightboxImage)}
       />
     </div>
   );

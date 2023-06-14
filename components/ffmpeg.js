@@ -55,7 +55,7 @@ export default async function getFileStructure(absolutePath, relativePath) {
               return checkFileExists(imageFilePath).then((imageExists) => {
                 if (!imageExists) {
                   exec(
-                    `ffmpeg -i ${pathToFile}  -c:v libwebp ${imageFilePath}`
+                    `ffmpeg -i ${pathToFile}  -c:v libwebp -quality 5 ${imageFilePath}`
                   );
                 }
                 return {
@@ -64,6 +64,7 @@ export default async function getFileStructure(absolutePath, relativePath) {
                     relativePath +
                     "/compressed/placeholders/" +
                     placeholderFileName,
+                  lightboxImage: relativePath + "/" + file,
                 };
               });
             }
