@@ -1,0 +1,37 @@
+.c-form-wrapper {
+  padding-right: 40px;
+  padding-left: 40px;
+  padding: 40px;
+  border-radius: 4px;
+  background-color: #f2a70c;
+  color: #01141f;
+}
+
+.c-form-grid {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr;
+}
+
+.c-checkbox-wrapper {
+  margin-top: 1rem;
+}
+
+.c-field-input-wrapper {
+  padding-top: 0.35rem;
+  display: flex;
+  align-items: center;
+}
+.c-field-input-wrapper input {
+  margin-right: 0.35rem;
+}
+
+.c-grid-item-wrap input {
+  padding: 0.4rem;
+}

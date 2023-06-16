@@ -73,14 +73,21 @@ export default function Navbar() {
               scroll={false}
               onClick={() => setIsMenuOpen(false)}
             >
-              <div>About me</div>
+              <div>O mě</div>
+            </Link>
+            <Link
+              href="/#services"
+              scroll={false}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <div>Služby</div>
             </Link>
             <Link
               href="/#contact"
               scroll={false}
               onClick={() => setIsMenuOpen(false)}
             >
-              <div>Get in touch</div>
+              <div>Kontakt</div>
             </Link>
           </div>
         </div>
