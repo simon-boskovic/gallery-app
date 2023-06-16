@@ -58,19 +58,7 @@ a {
 }
 
 body {
-  background-image: linear-gradient(
-    135deg,
-    #350956,
-    #7b0e61,
-    #c91458,
-    #ff6f91,
-    #ff9671,
-    #ff9671,
-    #ff6f91,
-    #c91458,
-    #7b0e61,
-    #350956
-  );
+    background-image: linear-gradient(135deg, #00086a, #06298d, #576fd2, #c764af, #da66dc, #bd90ce, #ec19a0, #4d26fc, #7b0e61, #350956);
   color: white;
   height: 100%;
 }
