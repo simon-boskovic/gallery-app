@@ -1,6 +1,6 @@
-import getFileStructure from "../../../../components/ffmpeg";
-import GalleryItem from "../../../../components/gallery/gallery-item";
-import styles from "../../../../styles/Gallery.module.scss";
+import getFileStructure from "../../../components/ffmpeg";
+import GalleryItem from "../../../components/gallery/gallery-item";
+import styles from "../../../styles/Gallery.module.scss";
 
 export function generateStaticParams() {
   return ["interior_photography", "real_estate", "corporate_photography"].map(

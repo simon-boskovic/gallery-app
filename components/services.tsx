@@ -6,8 +6,8 @@ export default function Services(props) {
     <div className={styles["c-services-section-wrapper"]}>
       <h2 className={styles["c-services-heading"]}>Služby</h2>
       <div className={styles["c-services-wrapper"]}>
-        {services.map((service) => (
-          <div className={styles["c-service"]}>
+        {services.map((service, index) => (
+          <div key={index} className={styles["c-service"]}>
             <h3>{service.title}</h3>
             <div className={styles["c-card"]}>
               <img

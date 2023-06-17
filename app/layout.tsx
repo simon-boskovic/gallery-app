@@ -1,6 +1,6 @@
-import Footer from "../../components/footer";
-import NavBar from "../../components/nav-bar";
-import "../../styles/globals.css";
+import Footer from "../components/footer";
+import NavBar from "../components/nav-bar";
+import "../styles/globals.css";
 import { Poppins } from "next/font/google";
 
 const poppins = Poppins({ subsets: ["devanagari"], weight: "400" });

@@ -1,13 +1,13 @@
 import fs from "fs/promises";
 import Head from "next/head";
 import path from "path";
-import AboutMe from "../../components/about-me";
-import Contact from "../../components/contact";
-import Hero from "../../components/hero";
-import Portoflio from "../../components/portfolio/portfolio";
-import getFileStructure from "../../components/ffmpeg";
-import Services from "../../components/services";
-import ContactForm from "../../components/contact-form";
+import AboutMe from "../components/about-me";
+import Contact from "../components/contact";
+import Hero from "../components/hero";
+import Portoflio from "../components/portfolio/portfolio";
+import getFileStructure from "../components/ffmpeg";
+import Services from "../components/services";
+import AsyncTest from "../components/async-test";
 
 export default async function HomePage() {
   const dataJsonPath = path.join(process.cwd(), "data", "data.json");
@@ -61,6 +61,9 @@ export default async function HomePage() {
       </section>
       <section id="services">
         <Services services={servicesJson.services}></Services>
+      </section>
+      <section>
+        <AsyncTest></AsyncTest>
       </section>
       <section id="contact">
         <Contact></Contact>
