@@ -1,0 +1,26 @@
+.c-section-wrapper {
+  margin-top: 3rem !important;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+@media (min-width: 768px) {
+  .c-section-wrapper {
+    margin-top: 6rem !important;
+    display: flex;
+    flex-direction: column;
+    padding-right: 40px;
+    padding-left: 40px;
+    margin-top: 3rem;
+    width: 100%;
+    max-width: 1360px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.c-events-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}

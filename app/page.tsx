@@ -7,7 +7,7 @@ import Hero from "../components/hero";
 import Portoflio from "../components/portfolio/portfolio";
 import getFileStructure from "../components/ffmpeg";
 import Services from "../components/services";
-import AsyncTest from "../components/async-test";
+import EventList from "../components/events/event-list";
 
 export default async function HomePage() {
   const dataJsonPath = path.join(process.cwd(), "data", "data.json");
@@ -63,7 +63,7 @@ export default async function HomePage() {
         <Services services={servicesJson.services}></Services>
       </section>
       <section>
-        <AsyncTest></AsyncTest>
+        <EventList></EventList>
       </section>
       <section id="contact">
         <Contact></Contact>

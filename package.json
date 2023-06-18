@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -18,10 +18,8 @@
     "fslightbox-react": "^1.7.4",
     "next": "^13.4.5",
     "react": "18.2.0",
+    "react-content-loader": "^6.2.1",
     "react-dom": "18.2.0",
-    "react-image": "^4.1.0",
-    "react-load-image": "^0.1.7",
-    "react-responsive-masonry": "^2.1.7",
     "sass": "^1.63.4",
     "typescript": "5.1.3"
   }

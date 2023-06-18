@@ -1,3 +1,10 @@
+import { Facebook } from "react-content-loader";
+import styles from "../styles/Loading-placeholder.module.scss";
+
 export default function Loading() {
-  return <div style={{ height: "100vh" }}>Loading...</div>;
+  return (
+    <div className={styles["c-loading-bar-wrapper"]}>
+      <Facebook />
+    </div>
+  );
 }

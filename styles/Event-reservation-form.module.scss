@@ -1,0 +1,61 @@
+.c-event-confirmation-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.c-event-confirmation-form h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.c-event-confirmation-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+  width: 300px;
+}
+
+.c-event-confirmation-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.c-event-confirmation-form input {
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.c-event-confirmation-form button {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px; /* Zaoblené rohy */
+  transition: background-color 0.3s ease; /* Plynulá animace změny barvy pozadí */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Stín */
+}
+
+.c-event-confirmation-form button {
+  margin-bottom: 20px;
+  background-color: #4285f4; /* Barva pozadí tlačítka */
+  color: #fff; /* Barva textu tlačítka */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.c-event-confirmation-form button:hover {
+  color: #fff; /* Barva textu tlačítka při najetí myší */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Barva pozadí tlačítka při najetí myší */
+}

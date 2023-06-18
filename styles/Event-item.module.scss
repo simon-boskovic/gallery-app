@@ -1,0 +1,86 @@
+.c-event-item {
+  //calendar
+
+  position: relative;
+  width: 240px;
+  margin-top: 1rem;
+}
+
+.c-event-item-body {
+  //calendar-body
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-bottom: 6px solid #4285f4;
+  border-radius: 8px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 15%);
+}
+.c-event-item-month {
+  //month-name
+  color: #fff;
+  background: #4285f4;
+  width: 100%;
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 400;
+  padding: 5px 0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.c-event-item-day {
+  //day-name
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-top: 20px;
+}
+.c-event-item-date {
+  //date-number
+  color: #fff;
+  font-size: 6em;
+  font-weight: 600;
+  line-height: 1.2em;
+}
+.c-event-item-year {
+  //year
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.c-event-item-place {
+  margin-bottom: 10px;
+}
+.c-event-item-cta {
+  margin-bottom: 20px;
+  background-color: #fff; /* Barva pozadí tlačítka */
+  color: #4285f4; /* Barva textu tlačítka */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.c-event-item-cta--reserved {
+  background-color: #e91212;
+  color: #fff;
+}
+
+.c-event-item-cta--reserved:hover {
+  background-color: #e91212 !important;
+  color: #fff !important;
+  box-shadow: 0 4px 8px rgba(233, 18, 18, 0.4) !important;
+}
+
+.c-event-item-cta:hover {
+  background-color: #4285f4; /* Barva pozadí tlačítka při najetí myší */
+  color: #fff; /* Barva textu tlačítka při najetí myší */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Barva pozadí tlačítka při najetí myší */
+}
