@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import styles from "../../styles/Events.module.scss";
 import EventItem from "./event-item";
+import Loading from "../../app/loading";
 
 interface Event {
   id: number;
@@ -27,7 +28,7 @@ export default function EventList() {
   }, []);
 
   if (!events) {
-    return <div>Loading....</div>;
+    return <Loading />;
   }
 
   return (

@@ -10,11 +10,11 @@ import Services from "../components/services";
 import EventList from "../components/events/event-list";
 
 export default async function HomePage() {
-  const dataJsonPath = path.join(process.cwd(), "data", "data.json");
+  const portfolioJsonPath = path.join(process.cwd(), "data", "portfolio.json");
   const servicesJsonpath = path.join(process.cwd(), "data", "services.json");
 
   const dataJson = await fs
-    .readFile(dataJsonPath, "utf-8")
+    .readFile(portfolioJsonPath, "utf-8")
     .then((res) => JSON.parse(res));
 
   const servicesJson = await fs
