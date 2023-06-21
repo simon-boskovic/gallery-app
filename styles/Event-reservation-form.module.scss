@@ -30,6 +30,13 @@
   width: 100%;
 }
 
+.c-event-confirmation-form textarea {
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  resize: none;
+}
+
 .c-event-confirmation-form button {
   margin-top: 1rem;
   padding: 10px 20px;

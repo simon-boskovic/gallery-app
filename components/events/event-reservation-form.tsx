@@ -20,6 +20,8 @@ export default function EventConfirmationForm({ eventID, isCancellation }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [message, setMessage] = useState("");
+  const [calcelationMessage, setCalcelationMessage] = useState("");
   const [event, setEvent] = useState<Event>();
 
   useEffect(() => {
@@ -61,6 +63,13 @@ export default function EventConfirmationForm({ eventID, isCancellation }) {
     setPassword(e.target.value);
   };
 
+  const handleMessageChange = (e) => {
+    setMessage(e.target.value);
+  };
+  const handleCalcelationMessageChange = (e) => {
+    setCalcelationMessage(e.target.value);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const reservationData = {
@@ -68,6 +77,7 @@ export default function EventConfirmationForm({ eventID, isCancellation }) {
       name,
       email,
       password,
+      message,
     };
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const isEmailValid = emailRegex.test(reservationData.email);
@@ -113,11 +123,17 @@ export default function EventConfirmationForm({ eventID, isCancellation }) {
 
   const handleCancellation = async (e) => {
     e.preventDefault();
+
     await fetch(
-      `https://raiderrock.cz/test/index.php?id=${eventID}&password=${password}`,
+      `https://raiderrock.cz/test/index.php?id=${eventID}&name=${
+        event.name
+      }&password=${password}&message=${encodeURIComponent(calcelationMessage)}`,
       {
         method: "DELETE",
         cache: "no-cache",
+        headers: {
+          "Content-Type": "application/json",
+        },
       }
     )
       .then((res) => res.json())
@@ -136,6 +152,7 @@ export default function EventConfirmationForm({ eventID, isCancellation }) {
         <h3 className={styles["c-event-confirmation-form-date"]}>
           Datum: {formattedDate}
         </h3>
+
         <form onSubmit={handleCancellation}>
           <div>
             <label htmlFor="name">Heslo ke zrušení</label>
@@ -145,6 +162,16 @@ export default function EventConfirmationForm({ eventID, isCancellation }) {
               value={password}
               onChange={handlePasswordChange}
               required
+            />
+          </div>
+          <div>
+            <label htmlFor="textarea">Zpráva</label>
+            <textarea
+              id="textarea"
+              value={calcelationMessage}
+              onChange={handleCalcelationMessageChange}
+              rows={5}
+              cols={30}
             />
           </div>
           <button type="submit">Zrušit rezervaci</button>
@@ -190,6 +217,16 @@ export default function EventConfirmationForm({ eventID, isCancellation }) {
             onChange={handlePasswordChange}
             required
             minLength={4}
+          />
+        </div>
+        <div>
+          <label htmlFor="textarea">Zpráva</label>
+          <textarea
+            id="textarea"
+            value={message}
+            onChange={handleMessageChange}
+            rows={5}
+            cols={25}
           />
         </div>
         <button type="submit">Rezervovat</button>

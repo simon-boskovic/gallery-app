@@ -2,9 +2,9 @@ import EventConfirmationForm from "../../../components/events/event-reservation-
 import styles from "../../../styles/Event-reservation.module.scss";
 
 export async function generateStaticParams() {
-  const events = await fetch("https://raiderrock.cz/test/index.php").then(
-    (res) => res.json()
-  );
+  const events = await fetch("https://raiderrock.cz/test/index.php", {
+    cache: "no-cache",
+  }).then((res) => res.json());
 
   return events.map((event) => ({
     eventID: event.id.toString(),

@@ -19,7 +19,8 @@ export default function EventList() {
   useEffect(() => {
     const getEvents = async () => {
       const fetchedEvents = await fetch(
-        "https://raiderrock.cz/test/index.php"
+        "https://raiderrock.cz/test/index.php",
+        { cache: "no-cache" }
       ).then((res) => res.json());
 
       setEvents(fetchedEvents);
