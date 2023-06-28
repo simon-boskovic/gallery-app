@@ -61,7 +61,7 @@ export default function PortfolioItem(props) {
       <FsLightbox
         toggler={toggler}
         sourceIndex={imageIndex}
-        sources={portfolioItem.images.map((res) => res.lightboxImage)}
+        sources={portfolioItem.images.map((res) => res.image)}
       />
     </div>
   );

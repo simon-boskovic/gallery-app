@@ -72,6 +72,8 @@ body {
     #350956
   );
   color: white;
+  display: flex;
+  flex-direction: column;
   height: 100%;
 }
 

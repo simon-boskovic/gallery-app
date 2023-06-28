@@ -26,7 +26,7 @@ export default function Navbar() {
           }`}
         >
           <img
-            src={"/images/hero/hero-image.png"}
+            src={"/images/hero/compressed/images/hero-image.webp"}
             alt="Image"
             className={`${navigationStyles["c-logo"]}`}
           />

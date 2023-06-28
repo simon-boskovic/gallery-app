@@ -6,7 +6,7 @@ export default function Contact() {
     <div className={styles["c-contact-section-wrapper"]}>
       <div className={styles["c-contact-left"]}>
         <div className={styles["c-contact-image"]}>
-          <img src="/images/hero/hero-image.png" alt="" />
+          <img src="/images/hero/compressed/images/hero-image.webp" alt="" />
         </div>
         <h2>Feel inspired?</h2>
         <div>

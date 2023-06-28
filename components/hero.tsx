@@ -4,7 +4,8 @@ import styles from "../styles/HomePage.module.scss";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 
-export default function Hero() {
+export default function Hero(props) {
+  const { imagePath } = props;
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
@@ -32,7 +33,7 @@ export default function Hero() {
           </Link>
         </div>
         <img
-          src={"/images/hero/hero-image.png"}
+          src={imagePath}
           alt="Image"
           ref={imgRef}
           className={`${heroStyles["c-hero-image"]}`}

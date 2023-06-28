@@ -40,7 +40,7 @@ export default function GalleryItem(props) {
       <FsLightbox
         toggler={toggler}
         sourceIndex={imageIndex}
-        sources={resolvedImages.map((res) => res.lightboxImage)}
+        sources={resolvedImages.map((res) => res.image)}
       />
     </div>
   );

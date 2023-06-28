@@ -11,6 +11,15 @@
 .c-service:last-child {
   flex-shrink: 0;
 }
+.c-service:nth-child(1) {
+  flex-basis: 350px;
+}
+.c-service:nth-child(2) {
+  flex-basis: 350px;
+}
+.c-service:nth-child(3) {
+  flex-basis: 350px;
+}
 
 .c-services-wrapper {
   display: flex;
@@ -47,7 +56,9 @@
   background: #1f3d4738;
   backdrop-filter: blur(3px);
   border-radius: 15px;
-  padding: 30px;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   display: flex;
   flex-direction: column;
   transition: 0.5s;
@@ -77,10 +88,11 @@
   font-weight: 400;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1050px) {
   .c-services-wrapper {
     flex-direction: column;
   }
+
   .c-card-body {
     right: 0 !important;
     backdrop-filter: blur(1.5px);

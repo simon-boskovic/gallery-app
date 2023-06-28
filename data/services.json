@@ -3,25 +3,25 @@
     {
       "title": "Parové focení",
       "description": "Zachyťte a sdílejte lásku a spojení s romantickým parovým focením, které přesně vyjadřuje váš vztah.",
-      "image": "/images/services/parove_foceni.jpg",
+      "imagePath": "/images/services/compressed/images/parove_foceni.webp",
       "price": "2000 Kč"
     },
     {
       "title": "Těhotenské focení",
       "description": "Zvěčněte krásu a sílu těhotenství prostřednictvím těhotenského focení.",
-      "image": "/images/services/tehotenske_foceni.webp",
+      "imagePath": "/images/services/compressed/images/tehotenske_foceni.webp",
       "price": "2500 Kč"
     },
     {
       "title": "Rodiné focení",
       "description": "Zachyťte drahocenné momenty a vztahy uvnitř rodiny s rodinným focením.",
-      "image": "/images/services/rodine_foceni.jpg",
+      "imagePath": "/images/services/compressed/images/rodine_foceni.webp",
       "price": "3000 Kč"
     },
     {
       "title": "Portréty",
       "description": "Zachyťte jedinečnost a výraz jednotlivců s profesionálními portrétními fotografiemi.",
-      "image": "/images/services/portret.jpg",
+      "imagePath": "/images/services/compressed/images/portret.webp",
       "price": "1500 Kč"
     }
   ]

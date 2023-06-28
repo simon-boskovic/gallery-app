@@ -1,6 +1,7 @@
 import styles from "../styles/About-me.module.scss";
 
-export default function AboutMe() {
+export default function AboutMe(props) {
+  const { imagePaths } = props;
   return (
     <div className={styles["c-about-section-wrapper"]}>
       <div>
@@ -26,10 +27,10 @@ export default function AboutMe() {
       </div>
       <div className={styles["c-about-images"]}>
         <div className={styles["c-about-top-image"]}>
-          <img src="/images/about-me/about-me1.jpg" alt="" />
+          <img src={imagePaths[0].image} alt="" />
         </div>
         <div className={styles["c-about-bottom-image"]}>
-          <img src="/images/about-me/about-me2.jpg" alt="" />
+          <img src={imagePaths[1].image} alt="" />
         </div>
       </div>
     </div>

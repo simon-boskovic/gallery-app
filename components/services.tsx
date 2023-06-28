@@ -11,7 +11,7 @@ export default function Services(props) {
             <h3>{service.title}</h3>
             <div className={styles["c-card"]}>
               <img
-                src={service.image}
+                src={service.imagePath}
                 alt=""
                 className={styles["c-card-image"]}
               />

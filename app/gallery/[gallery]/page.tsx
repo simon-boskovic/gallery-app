@@ -21,7 +21,10 @@ export default async function GalleryPage(params) {
 
   let resolvedImages = await getFileStructure(
     process.cwd() + "/public" + relativePath,
-    relativePath
+    relativePath,
+    "20:-1",
+    "1320:-1",
+    80
   );
 
   return (

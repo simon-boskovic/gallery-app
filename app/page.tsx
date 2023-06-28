@@ -9,16 +9,21 @@ import getFileStructure from "../components/ffmpeg";
 import Services from "../components/services";
 import EventList from "../components/events/event-list";
 
-export default async function HomePage() {
-  const portfolioJsonPath = path.join(process.cwd(), "data", "portfolio.json");
-  const servicesJsonpath = path.join(process.cwd(), "data", "services.json");
+async function getHeroData() {
+  const relativeHeroImagePath = "/images/hero";
+  return await getFileStructure(
+    process.cwd() + "/public" + relativeHeroImagePath,
+    relativeHeroImagePath,
+    "20:-1",
+    "1200:-1",
+    80
+  ).then((res) => res[0]);
+}
 
+async function getPortfolioData() {
+  const portfolioJsonPath = path.join(process.cwd(), "data", "portfolio.json");
   const dataJson = await fs
     .readFile(portfolioJsonPath, "utf-8")
-    .then((res) => JSON.parse(res));
-
-  const servicesJson = await fs
-    .readFile(servicesJsonpath, "utf-8")
     .then((res) => JSON.parse(res));
 
   const portfolioResult: any[] = [];
@@ -27,7 +32,10 @@ export default async function HomePage() {
     const relativePath = "/images/portfolio/" + portfolioItem.imagesPath;
     const resolvedImages = await getFileStructure(
       process.cwd() + "/public" + relativePath,
-      relativePath
+      relativePath,
+      "20:-1",
+      "1200:-1",
+      80
     );
     portfolioResult.push({
       imagesPath: portfolioItem.imagesPath,
@@ -41,6 +49,43 @@ export default async function HomePage() {
       }),
     });
   }
+  return portfolioResult;
+}
+
+async function getServicesData() {
+  const servicesJsonpath = path.join(process.cwd(), "data", "services.json");
+  const relativeServicesImagesPath = "/images/services";
+  await getFileStructure(
+    process.cwd() + "/public" + relativeServicesImagesPath,
+    relativeServicesImagesPath,
+    "20:-1",
+    "1200:-1",
+    80
+  );
+
+  const servicesJson = await fs
+    .readFile(servicesJsonpath, "utf-8")
+    .then((res) => JSON.parse(res));
+
+  return servicesJson;
+}
+
+async function getAboutMeData() {
+  const aboutMeImagesRelativePath = "/images/about-me";
+  return await getFileStructure(
+    process.cwd() + "/public" + aboutMeImagesRelativePath,
+    aboutMeImagesRelativePath,
+    "20:-1",
+    "1200:-1",
+    80
+  );
+}
+
+export default async function HomePage() {
+  const heroSectionData = await getHeroData();
+  const portfolioSectionData = await getPortfolioData();
+  const servicesSectionData = await getServicesData();
+  const aboutMeSectionData = await getAboutMeData();
 
   return (
     <>
@@ -51,16 +96,16 @@ export default async function HomePage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section>
-        <Hero></Hero>
+        <Hero imagePath={heroSectionData.image}></Hero>
       </section>
       <section id="portfolio">
-        <Portoflio portfolioResult={portfolioResult}></Portoflio>
+        <Portoflio portfolioResult={portfolioSectionData}></Portoflio>
       </section>
       <section id="about-me">
-        <AboutMe></AboutMe>
+        <AboutMe imagePaths={aboutMeSectionData}></AboutMe>
       </section>
       <section id="services">
-        <Services services={servicesJson.services}></Services>
+        <Services services={servicesSectionData.services}></Services>
       </section>
       <section>
         <EventList></EventList>
