@@ -2,15 +2,18 @@
   "portfolio": [
     {
       "title": "Interior photography",
-      "imagesPath": "interior_photography"
+      "imagesPath": "interior-photography",
+      "pageTitle": "Galerie interiéru"
     },
     {
       "title": "Real Estate",
-      "imagesPath": "real_estate"
+      "imagesPath": "real-estate",
+      "pageTitle": "Galerie real estate"
     },
     {
       "title": "Corporate photography",
-      "imagesPath": "corporate_photography"
+      "imagesPath": "corporate-photography",
+      "pageTitle": "Galerie korporátu"
     }
   ]
 }

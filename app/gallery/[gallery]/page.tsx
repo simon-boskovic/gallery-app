@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import getFileStructure from "../../../components/ffmpeg";
 import Footer from "../../../components/footer";
 import GalleryGrid from "../../../components/gallery/gallery-grid";
@@ -14,7 +15,15 @@ export async function generateStaticParams() {
 
   return dataJson.portfolio.map((portfolio) => ({
     gallery: portfolio.imagesPath,
+    title: portfolio.pageTitle,
   }));
+}
+
+export async function generateMetadata(params): Promise<Metadata> {
+  console.log(params);
+  return {
+    title: params.title,
+  };
 }
 
 export default async function GalleryPage(params) {

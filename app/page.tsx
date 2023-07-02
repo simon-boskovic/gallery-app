@@ -9,6 +9,7 @@ import getFileStructure from "../components/ffmpeg";
 import Services from "../components/services";
 import EventList from "../components/events/event-list";
 import Footer from "../components/footer";
+import { Metadata } from "next";
 
 async function getHeroData() {
   const relativeHeroImagePath = "/images/hero";
@@ -81,6 +82,12 @@ async function getAboutMeData() {
     80
   );
 }
+
+export const metadata: Metadata = {
+  title: "Michaela Malčíková - Umělecká Galerie",
+  description:
+    "Prohlédněte si nádherná umělecká díla Michaely Malčíkové v její online galerii. Obrazy plné emocí, barev a jedinečného vyjádření.",
+};
 
 export default async function HomePage() {
   const heroSectionData = await getHeroData();
