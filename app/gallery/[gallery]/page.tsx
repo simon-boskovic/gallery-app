@@ -1,5 +1,5 @@
 import getFileStructure from "../../../components/ffmpeg";
-import GalleryItem from "../../../components/gallery/gallery-item";
+import GalleryGrid from "../../../components/gallery/gallery-grid";
 import styles from "../../../styles/Gallery.module.scss";
 import fs from "fs/promises";
 import path from "path";
@@ -29,7 +29,7 @@ export default async function GalleryPage(params) {
 
   return (
     <div className={styles["c-gallery-wrapper"]}>
-      <GalleryItem resolvedImages={resolvedImages}></GalleryItem>
+      <GalleryGrid resolvedImages={resolvedImages}></GalleryGrid>
     </div>
   );
 }

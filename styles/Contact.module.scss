@@ -13,6 +13,10 @@
 
 .c-contact-left {
   max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .c-contact-image {

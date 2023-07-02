@@ -15,14 +15,11 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }): Promise<Metadata> {
   "use client";
-  console.log(params);
 
   return {};
 }
 
 export default async function EventCancellationPage({ params }) {
-  console.log(params);
-
   return (
     <div className={styles["c-event-reservation"]}>
       <h1>Zrušení rezervace termínu</h1>

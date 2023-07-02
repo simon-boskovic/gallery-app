@@ -1,18 +1,23 @@
 "use client";
+import { useEffect, useRef, useState } from "react";
 import heroStyles from "../styles/Hero.module.scss";
 import styles from "../styles/HomePage.module.scss";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
 
 export default function Hero(props) {
   const { imagePath } = props;
   const imgRef = useRef<HTMLImageElement>(null);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   useEffect(() => {
     if (imgRef.current?.complete) {
-      imgRef.current.classList.add(heroStyles["c-hero-image--loaded"]);
+      setIsImageLoaded(true);
     }
   }, []);
+
+  const handleImageLoad = () => {
+    setIsImageLoaded(true);
+  };
 
   return (
     <div className={`${styles["c-background-gradient"]}`}>
@@ -36,7 +41,10 @@ export default function Hero(props) {
           src={imagePath}
           alt="Image"
           ref={imgRef}
-          className={`${heroStyles["c-hero-image"]}`}
+          className={`${heroStyles["c-hero-image"]} ${
+            isImageLoaded ? heroStyles["c-hero-image--loaded"] : ""
+          }`}
+          onLoad={handleImageLoad}
         />
       </div>
     </div>

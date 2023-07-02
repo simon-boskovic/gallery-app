@@ -15,8 +15,9 @@
 .c-portfolio-images {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   gap: 1rem;
+  flex-wrap: wrap;
+  flex-basis: 33% !important;
 }
 
 .c-portfolio-image-wrapper {
@@ -132,5 +133,9 @@
 
   .c-portfolio-images {
     flex-direction: row;
+  }
+
+  .c-portfolio-image-wrapper {
+    flex-basis: 350px;
   }
 }

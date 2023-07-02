@@ -7,7 +7,6 @@ export default function ErrorPage({
   error: Error;
   reset: () => void;
 }) {
-  console.log(error);
   return (
     <div className={styles["c-error-page"]}>
       <h1 className={`${styles["c-error-page__title"]} error-page__title`}>

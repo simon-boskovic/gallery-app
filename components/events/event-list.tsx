@@ -15,6 +15,8 @@ interface Event {
 }
 
 export default function EventList() {
+
+
   const [events, setEvents] = useState<Event[]>();
   useEffect(() => {
     const getEvents = async () => {

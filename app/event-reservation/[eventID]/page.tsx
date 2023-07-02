@@ -15,7 +15,6 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }): Promise<Metadata> {
   "use client";
-  console.log(params);
 
   return {};
 }
