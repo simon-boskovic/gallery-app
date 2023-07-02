@@ -18,16 +18,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={` ${poppins.className}`}>
-        <div>
-          <section>
-            <NavBar></NavBar>
-          </section>
-          {children}
-          <section>
-            <Footer></Footer>
-          </section>
-        </div>
+      <body
+        className={` ${poppins.className}`}
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          height: "100%",
+          justifyContent: "space-between",
+        }}
+      >
+        <NavBar></NavBar>
+        {children}
+        <Footer></Footer>
       </body>
     </html>
   );

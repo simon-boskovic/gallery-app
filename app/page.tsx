@@ -8,6 +8,7 @@ import Portoflio from "../components/portfolio/portfolio";
 import getFileStructure from "../components/ffmpeg";
 import Services from "../components/services";
 import EventList from "../components/events/event-list";
+import Footer from "../components/footer";
 
 async function getHeroData() {
   const relativeHeroImagePath = "/images/hero";
@@ -86,7 +87,6 @@ export default async function HomePage() {
   const portfolioSectionData = await getPortfolioData();
   const servicesSectionData = await getServicesData();
   const aboutMeSectionData = await getAboutMeData();
-
   return (
     <>
       <Head>
