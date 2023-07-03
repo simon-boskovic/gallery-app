@@ -1,15 +1,19 @@
 "use client";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import styles from "../styles/ContactForm.module.scss";
 
 export default function ContactForm() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+  const nameRef = useRef<HTMLInputElement>(null);
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+    console.log(nameRef.current?.value);
+  };
 
   return (
     <div className={styles["c-form-wrapper"]}>
       <div className={styles["c-form"]}>
-        <form action="">
+        <form onSubmit={onSubmit}>
           <div className={styles["c-form-grid"]}>
             <div className={styles["c-grid-item"]}>
               <div className={styles["c-grid-item-label"]}>
@@ -17,6 +21,7 @@ export default function ContactForm() {
               </div>
               <div className={styles["c-grid-item-wrap"]}>
                 <input
+                  ref={nameRef}
                   type="text"
                   className={styles["c-grid-item-wrap"]}
                   name="name"
