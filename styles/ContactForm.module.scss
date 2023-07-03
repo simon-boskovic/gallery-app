@@ -34,4 +34,32 @@
 
 .c-grid-item-wrap input {
   padding: 0.4rem;
+  width: 100%;
+}
+
+.c-grid-item-label {
+  margin-bottom: 0.25rem;
+}
+
+.c-grid-item-wrap textarea {
+  resize: none;
+  width: 100%;
+}
+
+.c-submit-wrapper {
+  text-align: center;
+}
+
+.c-submit-btn {
+  margin-top: 1rem;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 4px;
+  background-color: #312e27;
+  color: #01141f;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  text-transform: uppercase;
 }

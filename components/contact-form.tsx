@@ -1,5 +1,11 @@
+"use client";
+import { useState } from "react";
 import styles from "../styles/ContactForm.module.scss";
+
 export default function ContactForm() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+
   return (
     <div className={styles["c-form-wrapper"]}>
       <div className={styles["c-form"]}>
@@ -43,6 +49,18 @@ export default function ContactForm() {
                 />
               </div>
             </div>
+            <div className={styles["c-grid-item"]}>
+              <div className={styles["c-grid-item-label"]}>Zpráva</div>
+              <div className={styles["c-grid-item-wrap"]}>
+                <textarea
+                  className={styles["c-grid-item-wrap"]}
+                  rows={5}
+                  name="name"
+                  id="name"
+                  required
+                />
+              </div>
+            </div>
           </div>
           <div className={styles["c-checkbox-wrapper"]}>
             <div className={styles["c-field-name"]}>Mám zájem o službu: </div>
@@ -62,6 +80,11 @@ export default function ContactForm() {
               <input type="checkbox" id="portrety" />
               <label htmlFor="portrety">Portréty</label>
             </div>
+          </div>
+          <div className={styles["c-submit-wrapper"]}>
+            <button className={styles["c-submit-btn"]} type="submit">
+              Odeslat
+            </button>
           </div>
         </form>
       </div>

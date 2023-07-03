@@ -19,7 +19,7 @@ export default function Contact() {
           <span>Email me</span>
         </button>
       </div>
-      <div>
+      <div className={styles["c-contact-right"]}>
         <ContactForm></ContactForm>
       </div>
     </div>

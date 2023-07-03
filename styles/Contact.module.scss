@@ -12,11 +12,16 @@
 }
 
 .c-contact-left {
-  max-width: 400px;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+.c-contact-right {
+  max-width: 400px;
+  flex-grow: 1;
+  flex-shrink: 0;
 }
 
 .c-contact-image {

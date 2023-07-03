@@ -3,26 +3,40 @@ import getFileStructure from "../../../components/ffmpeg";
 import Footer from "../../../components/footer";
 import GalleryGrid from "../../../components/gallery/gallery-grid";
 import styles from "../../../styles/Gallery.module.scss";
-import fs from "fs/promises";
+import fsp from "fs/promises";
 import path from "path";
 
-export async function generateStaticParams() {
-  const portfolioJsonPath = path.join(process.cwd(), "data", "portfolio.json");
+const portfolioJsonPath = path.join(process.cwd(), "data", "portfolio.json");
 
-  const dataJson = await fs
+async function getPortofilioJson() {
+  return fsp
     .readFile(portfolioJsonPath, "utf-8")
     .then((res) => JSON.parse(res));
-
-  return dataJson.portfolio.map((portfolio) => ({
-    gallery: portfolio.imagesPath,
-    title: portfolio.pageTitle,
-  }));
 }
 
-export async function generateMetadata(params): Promise<Metadata> {
-  console.log(params);
+async function getSingleItem(imagesPath: string) {
+  const dataJson = await getPortofilioJson();
+  console.log(
+    dataJson.portfolio.find((item) => item.imagesPath === imagesPath) || null
+  );
+  return (
+    dataJson.portfolio.find((item) => item.imagesPath === imagesPath) || null
+  );
+}
+
+export async function generateStaticParams() {
+  const dataJson = await getPortofilioJson();
+
+  const res = dataJson.portfolio.map((portfolio) => ({
+    gallery: portfolio.imagesPath,
+  }));
+  return res;
+}
+
+export async function generateMetadata({ params }): Promise<Metadata> {
+  const item = await getSingleItem(params.gallery);
   return {
-    title: params.title,
+    title: item.pageTitle,
   };
 }
 
