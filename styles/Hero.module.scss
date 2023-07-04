@@ -5,7 +5,8 @@
 }
 
 .c-hero-image {
-  max-width: 100% !important;
+  max-height: 70%;
+
   position: relative;
   margin-top: 40px;
   transition: opacity 1s ease-in;
@@ -59,11 +60,9 @@
 @media (min-width: 768px) {
   .c-hero-image {
     position: absolute;
-    left: auto;
-    top: auto;
-    right: 0%;
-    bottom: 0%;
-    max-height: 90%;
+    right: 7%;
+
+    max-height: 70%;
   }
   .c-hero-container {
     padding: 180px 40px 0px;

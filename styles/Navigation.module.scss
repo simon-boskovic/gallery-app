@@ -1,30 +1,35 @@
 .c-navigation {
   position: fixed;
-  left: 0%;
-  top: 40px;
-  right: 0%;
-  bottom: auto;
+  left: 0;
+  top: 0;
+  right: 0;
   width: 100%;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding: 10px 20px;
   background-color: transparent;
   z-index: 21;
+  transition: top 200ms ease, background-color 200ms ease, box-shadow 200ms ease;
+}
+
+.c-navigation--scrolled {
+  top: 40px;
+  background-image: linear-gradient(
+    135deg,
+    #91c6ff,
+    #fb5607,
+    #d00000,
+    #9d0208,
+    #6a040f,
+    #370617,
+    #03071e
+  );
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Přidaný box-shadow efekt */
 }
 
 .c-nav-container {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
+  width: 100%;
 }
 
 .c-logo-wrapper {
@@ -96,7 +101,6 @@
 .c-menu-toggle-wrap--is-open {
   &.c-menu-toggle-wrap div:first-child {
     position: absolute;
-
     transform: translateY(0) rotate(45deg);
   }
   &.c-menu-toggle-wrap div:nth-child(2) {
@@ -120,7 +124,8 @@
   transition: opacity 200ms ease;
 }
 
-.c-menu-navigation a div {
+.c-menu-navigation a {
+  display: block;
   color: white;
   padding: 0.3rem 1rem;
   text-decoration: underline 0.15em white;
@@ -128,11 +133,7 @@
   transition: text-decoration-color 300ms, text-underline-offset 300ms;
 }
 
-.c-menu-text {
-  color: white;
-}
-
-.c-menu-navigation a div:hover {
+.c-menu-navigation a:hover {
   text-decoration-color: rgb(100, 100, 197);
   text-underline-offset: 0.4em;
 }
@@ -142,17 +143,16 @@
   display: none;
 }
 
-.c-menu-navigation a div:last-child {
+.c-menu-navigation a:last-child {
   padding-bottom: 1rem;
 }
 
 @media (max-width: 768px) {
   .c-navigation {
     position: fixed;
-    left: 0%;
-    top: 40px;
-    right: 0%;
-    bottom: auto;
+    left: 0;
+    top: 0;
+    right: 0;
     width: 100%;
     padding-right: 20px;
     padding-left: 20px;
