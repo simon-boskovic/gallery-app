@@ -16,9 +16,7 @@ async function getPortofilioJson() {
 
 async function getSingleItem(imagesPath: string) {
   const dataJson = await getPortofilioJson();
-  console.log(
-    dataJson.portfolio.find((item) => item.imagesPath === imagesPath) || null
-  );
+
   return (
     dataJson.portfolio.find((item) => item.imagesPath === imagesPath) || null
   );

@@ -12,7 +12,6 @@ export default function PortfolioItemImage(props) {
     if (wrapperRef && wrapperRef.current) {
       wrapperRef.current.style.width = "auto";
     }
-    console.log("onLoad");
   }
 
   useEffect(() => {
