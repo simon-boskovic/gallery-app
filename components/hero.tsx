@@ -23,7 +23,7 @@ export default function Hero(props) {
     <div className={`${styles["c-background-gradient"]}`}>
       <div className={`${heroStyles["c-hero-container"]}`}>
         <div className={`${heroStyles["c-hero-content"]}`}>
-          <h1>Ráda zachycuji nejlepší okamžiky</h1>
+          <h1>Rada zachycuji Vaše nejkrásnější okamžiky</h1>
           <p className={`${heroStyles["c-hero-subtitle"]}`}>
             Jsem specializovaný na konceptuální fotografii a působím v
             Amsterdamu. Rád fotím s kreativitou a vášní.
