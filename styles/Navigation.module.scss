@@ -14,20 +14,20 @@
   top: 40px;
   background-image: linear-gradient(
     135deg,
-    #91c6ff,
-    #fb5607,
-    #d00000,
-    #9d0208,
-    #6a040f,
-    #370617,
-    #03071e
+    rgba(145, 198, 255, 0.7),
+    rgba(251, 86, 7, 0.7),
+    rgba(208, 0, 0, 0.7),
+    rgba(157, 2, 8, 0.7),
+    rgba(106, 4, 15, 0.7),
+    rgba(55, 6, 23, 0.7),
+    rgba(3, 7, 30, 0.7)
   );
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Přidaný box-shadow efekt */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .c-nav-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
 }

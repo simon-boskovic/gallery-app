@@ -33,7 +33,7 @@ export default function Navbar() {
       }`}
     >
       <div className={`${navigationStyles["c-nav-container"]}`}>
-        <Link href="/" passHref>
+        {/* <Link href="/" passHref>
           <div className={`${navigationStyles["c-logo-wrapper"]}`}>
             <img
               src="/images/hero/compressed/images/hero-image.webp"
@@ -42,7 +42,7 @@ export default function Navbar() {
             />
             <div className={`${navigationStyles["c-text-logo"]}`}>HREF</div>
           </div>
-        </Link>
+        </Link> */}
         <div className={`${navigationStyles["c-menu-button-container"]}`}>
           <div
             className={`${navigationStyles["c-menu-button-wrapper"]}`}
