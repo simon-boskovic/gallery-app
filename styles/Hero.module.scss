@@ -6,11 +6,20 @@
 
 .c-hero-image {
   max-height: 70%;
-
+  width: 100%;
+  object-fit: contain;
+  max-width: 600px;
   position: relative;
   margin-top: 40px;
   transition: opacity 1s ease-in;
   opacity: 0;
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  .c-hero-image {
+    max-width: 350px;
+  }
 }
 
 .c-hero-image--loaded {
@@ -62,19 +71,11 @@
   width: 100%;
 }
 
-.c-hero-image {
-  width: 100%;
-  object-fit: contain;
-  max-width: 600px;
-}
-
-@media (min-width: 1025px) {
+@media (min-width: 900px) {
   .c-hero-container {
     flex-direction: row;
     padding: 180px 5% 120px;
     padding-bottom: 0 !important;
-    gap: 2rem;
-
     position: relative;
     display: flex;
     width: 100%;

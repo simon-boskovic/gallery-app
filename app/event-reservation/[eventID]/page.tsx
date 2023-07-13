@@ -3,7 +3,7 @@ import EventConfirmationForm from "../../../components/events/event-reservation-
 import styles from "../../../styles/Event-reservation.module.scss";
 
 export async function generateStaticParams() {
-  const events = await fetch("https://raiderrock.cz/test/index.php", {
+  const events = await fetch("https://malcikova-photo.cz/api/events.php", {
     cache: "no-cache",
   }).then((res) => res.json());
 

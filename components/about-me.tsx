@@ -11,7 +11,7 @@ export default function AboutMe(props) {
           Zjistila jsem, že fotografování je krásná práce, při které mohu
           zachycovat krásné a nezapomenutelné pocity. Díky focení mám možnost
           poznávat i úžasné lidi. Mám ráda fotografie plné emocí. Nenutím
-          klienty do strojených pózí, chci zachytit jedinečnost okamžiku.
+          klienty do strojených póz, chci zachytit jedinečnost okamžiku.
           Největší odměna pro mě je, když si focení užijete a odcházíte s
           pocitem, že jste strávili příjemný čas se svými nejbližšími
         </p>

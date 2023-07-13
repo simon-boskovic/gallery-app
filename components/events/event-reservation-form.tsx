@@ -27,7 +27,7 @@ export default function EventConfirmationForm({ eventID, isCancellation }) {
   useEffect(() => {
     const getEvent = async () => {
       const fetchedEvent = await fetch(
-        "https://raiderrock.cz/test/index.php?id=" + eventID,
+        "https://malcikova-photo.cz/api/events.php?id=" + eventID,
         { cache: "no-cache" }
       ).then((res) => res.json());
 
@@ -103,7 +103,7 @@ export default function EventConfirmationForm({ eventID, isCancellation }) {
     if (!isEmailValid || !isNameValid || !isPasswordValid) {
       return;
     }
-    await fetch("https://raiderrock.cz/test/index.php", {
+    await fetch("https://malcikova-photo.cz/api/events.php", {
       method: "POST",
       cache: "no-cache",
       body: JSON.stringify(reservationData),

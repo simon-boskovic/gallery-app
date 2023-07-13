@@ -47,7 +47,7 @@ export default function ContactForm() {
 
     try {
       const response = await fetch(
-        "https://raiderrock.cz/test/index.php?contactForm",
+        "https://malcikova-photo.cz/api/services.php?contactForm",
         {
           method: "POST",
           headers: {

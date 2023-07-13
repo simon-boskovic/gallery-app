@@ -15,13 +15,11 @@ interface Event {
 }
 
 export default function EventList() {
-
-
   const [events, setEvents] = useState<Event[]>();
   useEffect(() => {
     const getEvents = async () => {
       const fetchedEvents = await fetch(
-        "https://raiderrock.cz/test/index.php",
+        "https://malcikova-photo.cz/api/events.php",
         { cache: "no-cache" }
       ).then((res) => res.json());
 

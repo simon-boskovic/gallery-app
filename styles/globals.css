@@ -57,7 +57,13 @@ a {
   }
 }
 
-body {
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-image: linear-gradient(
     135deg,
     #91c6ff,
@@ -68,9 +74,10 @@ body {
     #370617,
     #03071e
   );
+  z-index: -1;
+}
 
-  background-attachment: fixed;
-  background-size: cover;
+body {
   color: white;
   display: flex;
   flex-direction: column;

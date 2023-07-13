@@ -1,7 +1,7 @@
 import fs from "fs/promises";
 import path from "path";
 
-const WEB_URL = "http://localhost:3000";
+const WEB_URL = "https://malcikova-photo.cz";
 
 const generateDynamicRoutes = async (
   fetchURL: string,
@@ -31,12 +31,12 @@ const getPortfolioGalleryRoutes = async () => {
 
 export default async function sitemap() {
   const cancellationEventsRoutes = await generateDynamicRoutes(
-    "https://raiderrock.cz/test/index.php",
+    "https://malcikova-photo.cz/api/events.php",
     "event-cancellation",
     "id"
   );
   const reservationEventsRoutes = await generateDynamicRoutes(
-    "https://raiderrock.cz/test/index.php",
+    "https://malcikova-photo.cz/api/events.php",
     "event-reservation",
     "id"
   );
