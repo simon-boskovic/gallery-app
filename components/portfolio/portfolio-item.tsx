@@ -43,16 +43,18 @@ export default function PortfolioItem(props) {
       </div>
 
       <div className={`${styles["c-portfolio-button-wrapper"]}`}>
-        <Link
+        {/* <Link
           href={"/gallery/" + portfolioItem.imagesPath}
           className={`${styles["c-portfolio-button"]}`}
         >
           Celá Galerie
-        </Link>
+        </Link> */}
         <button
           className={`${styles["c-portfolio-button"]}`}
           onClick={() =>
-            maxImagesCount === 3 ? setMaxImagesCount(9) : setMaxImagesCount(3)
+            maxImagesCount === 3
+              ? setMaxImagesCount(1000)
+              : setMaxImagesCount(3)
           }
         >
           {maxImagesCount === 3 ? "Rozbalit" : "Zbalit"}

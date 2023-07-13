@@ -19,7 +19,8 @@
   text-align: center;
 }
 .c-contact-right {
-  max-width: 400px;
+  width: 100%;
+  // max-width: 400px;
   flex-grow: 1;
   flex-shrink: 0;
 }
@@ -60,6 +61,9 @@
 }
 
 @media (min-width: 768px) {
+  .c-contact-right {
+    max-width: 400px;
+  }
   .c-contact-section-wrapper {
     width: 100%;
     flex-direction: row;

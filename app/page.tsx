@@ -32,6 +32,7 @@ async function getPortfolioData() {
 
   for (const portfolioItem of dataJson.portfolio) {
     const relativePath = "/images/portfolio/" + portfolioItem.imagesPath;
+
     const resolvedImages = await getFileStructure(
       process.cwd() + "/public" + relativePath,
       relativePath,

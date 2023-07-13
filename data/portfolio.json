@@ -1,19 +1,19 @@
 {
   "portfolio": [
     {
-      "title": "Interior photography",
-      "imagesPath": "interior-photography",
-      "pageTitle": "Galerie interiéru"
+      "title": "Těhotenské focení",
+      "imagesPath": "tehotenske-foceni",
+      "pageTitle": "Těhotenské focení"
     },
     {
-      "title": "Real Estate",
-      "imagesPath": "real-estate",
-      "pageTitle": "Galerie real estate"
+      "title": "Párové focení",
+      "imagesPath": "parove-foceni",
+      "pageTitle": "Párové focení"
     },
     {
-      "title": "Corporate photography",
-      "imagesPath": "corporate-photography",
-      "pageTitle": "Galerie korporátu"
+      "title": "Portréty",
+      "imagesPath": "portrety",
+      "pageTitle": "Portréty"
     }
   ]
 }
