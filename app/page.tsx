@@ -114,9 +114,9 @@ export default async function HomePage() {
       <section id="services">
         <Services services={servicesSectionData.services}></Services>
       </section>
-      <section id="event-list">
+      {/* <section id="event-list">
         <EventList></EventList>
-      </section>
+      </section> */}
       <section id="contact">
         <Contact></Contact>
       </section>

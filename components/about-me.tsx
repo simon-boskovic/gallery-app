@@ -6,23 +6,16 @@ export default function AboutMe(props) {
     <div className={styles["c-about-section-wrapper"]}>
       <div>
         <h2>Proč jsem se zamiloval do fotografie</h2>
+        <h3 className={styles["c-about-subtitle"]}>
+          Ahoj, jmenuji se Michaela
+        </h3>
         <p className={styles["c-about-text"]}>
-          Záchyt okamžiků: Fotografie mi umožňuje zachytit{" "}
-          <strong>okamžiky</strong> a události tak, jak je vidím. Můžu
-          zaznamenat{" "}
-          <strong>
-            vzrušení, radost, emocionální okamžiky a pamětné okamžiky
-          </strong>
-          , které by jinak mohly být ztraceny v čase. Mít schopnost zachytit a
-          sdílet tyto okamžiky je pro mě velmi vzrušující.
-        </p>
-        <br />
-        <p className={styles["c-about-text"]}>
-          Komunikace bez slov: Fotografie je univerzálním jazykem, který
-          překračuje jazykové bariéry. Můžu vyjádřit{" "}
-          <strong>emoce, náladu a myšlenky</strong> pomocí jediného obrázku.
-          Tímto způsobem mohu <strong>komunikovat</strong> s lidmi z různých
-          kultur a prostředí a sdílet své příběhy bez slov.
+          Zjistila jsem, že fotografování je krásná práce, při které mohu
+          zachycovat krásné a nezapomenutelné pocity. Díky focení mám možnost
+          poznávat i úžasné lidi. Mám ráda fotografie plné emocí. Nenutím
+          klienty do strojených pózí, chci zachytit jedinečnost okamžiku.
+          Největší odměna pro mě je, když si focení užijete a odcházíte s
+          pocitem, že jste strávili příjemný čas se svými nejbližšími
         </p>
       </div>
       <div className={styles["c-about-images"]}>

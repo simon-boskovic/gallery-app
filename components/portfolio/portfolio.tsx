@@ -10,8 +10,10 @@ export default function Portoflio(props) {
     <div className={`${styles["c-portfolio-wrapper"]}`}>
       <h2>Moje práce</h2>
       <p className={`${styles["c-portfolio-description"]}`}>
-        Pomáhání podnikům prostřednictvím fotografie je to, co dělá můj job
-        smysluplným. Níže najdete některé z mých nedávných prací.
+        Moje fotografická cesta je oživena radostí z párových a těhotenských
+        fotografií, stejně jako z portrétů, které pomáhají lidem zachovat vzácné
+        momenty a vytvářet výjimečné vzpomínky. Zde naleznete výběr mých
+        nejnovějších děl, které reflektují tuto vášeň.
       </p>
 
       <div className={`${styles["c-portfolio-item-list"]}`}>

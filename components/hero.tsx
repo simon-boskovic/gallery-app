@@ -23,10 +23,11 @@ export default function Hero(props) {
     <div className={`${styles["c-background-gradient"]}`}>
       <div className={`${heroStyles["c-hero-container"]}`}>
         <div className={`${heroStyles["c-hero-content"]}`}>
-          <h1>Rada zachycuji Vaše nejkrásnější okamžiky</h1>
+          <h1>Rada zachycuji Vaše nejkrásnější okamžiky.</h1>
           <p className={`${heroStyles["c-hero-subtitle"]}`}>
-            Jsem specializovaný na konceptuální fotografii a působím v
-            Amsterdamu. Rád fotím s kreativitou a vášní.
+            Jsem nadšená fotografka na začátku své kariéry, vášnivě zamilovaná
+            do svého řemesla. Bude pro mě velkou ctí zachytit pro Vás
+            nezapomenutelné okamžiky.
           </p>
           <Link
             href="#portfolio"
@@ -37,15 +38,17 @@ export default function Hero(props) {
             <div className={`${heroStyles["c-button-wrapper__icon"]}`}></div>
           </Link>
         </div>
-        <img
-          src={imagePath}
-          alt="Image"
-          ref={imgRef}
-          className={`${heroStyles["c-hero-image"]} ${
-            isImageLoaded ? heroStyles["c-hero-image--loaded"] : ""
-          }`}
-          onLoad={handleImageLoad}
-        />
+        <div className={heroStyles["c-hero-image-wrapper"]}>
+          <img
+            src={imagePath}
+            alt="Image"
+            ref={imgRef}
+            className={`${heroStyles["c-hero-image"]} ${
+              isImageLoaded ? heroStyles["c-hero-image--loaded"] : ""
+            }`}
+            onLoad={handleImageLoad}
+          />
+        </div>
       </div>
     </div>
   );

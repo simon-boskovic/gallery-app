@@ -4,7 +4,7 @@ import ContactForm from "./contact-form";
 export default function Contact() {
   return (
     <div className={styles["c-contact-section-wrapper"]}>
-      <div className={styles["c-contact-left"]}>
+      {/* <div className={styles["c-contact-left"]}>
         <div className={styles["c-contact-image"]}>
           <img src="/images/hero/compressed/images/hero-image.webp" alt="" />
         </div>
@@ -18,7 +18,7 @@ export default function Contact() {
         <button className={styles["c-contact-button"]}>
           <span>Email me</span>
         </button>
-      </div>
+      </div> */}
       <div className={styles["c-contact-right"]}>
         <ContactForm></ContactForm>
       </div>
