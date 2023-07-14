@@ -1,19 +1,21 @@
 "use client";
-import navigationStyles from "../styles/Navigation.module.scss";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import navigationStyles from "../styles/Navigation.module.scss";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  let contentElement: Element;
   const handleScroll = () => {
-    setIsScrolled(window.scrollY > 0);
+    setIsScrolled(contentElement!.scrollTop > 0);
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    contentElement = document.querySelector(".content")!;
+    contentElement.addEventListener("scroll", handleScroll);
+    return () => contentElement.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {

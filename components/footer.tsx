@@ -1,19 +1,32 @@
 import styles from "../styles/Footer.module.scss";
+import FooterLink from "./footer-link";
 
 export default function Footer() {
   return (
     <footer className={styles["c-footer"]}>
       <div className={styles["c-footer-container"]}>
         <div>
-          <img src={"/images/footer/links/facebook.svg"} alt="" />
-          <img src={"/images/footer/links/instagram.svg"} alt="" />
+          <FooterLink
+            imgUrl={"/images/footer/links/instagram.svg"}
+            redirectUrl={"https://www.instagram.com/malcikovam"}
+            description={"Instagram link"}
+          />
+          <FooterLink
+            imgUrl={"/images/footer/links/facebook.svg"}
+            redirectUrl={"https://www.facebook.com/malcikovam"}
+            description={"Facebook link"}
+          />
         </div>
-        <a
-          href="https://www.linkedin.com/in/%C5%A1imon-bo%C5%A1kovi%C4%8D-469599183/"
-          target="_blank"
-        >
+        <div style={{ display: "flex", alignItems: "center" }}>
           Developed by Sajmon
-        </a>
+          <FooterLink
+            imgUrl={"/images/footer/links/linkedin.svg"}
+            redirectUrl={
+              "https://www.linkedin.com/in/%C5%A1imon-bo%C5%A1kovi%C4%8D-469599183/"
+            }
+            description={"Creator linkedin link"}
+          />
+        </div>
       </div>
     </footer>
   );
