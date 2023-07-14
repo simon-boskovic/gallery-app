@@ -22,7 +22,11 @@ export default function Hero(props) {
   return (
     <div className={`${styles["c-background-gradient"]}`}>
       <div className={`${heroStyles["c-hero-container"]}`}>
-        <div className={`${heroStyles["c-hero-content"]}`}>
+        <div
+          className={`${heroStyles["c-hero-content"]} ${
+            isImageLoaded ? heroStyles["c-hero-content--loaded"] : ""
+          }`}
+        >
           <h1>Ráda zachycuji Vaše nejkrásnější okamžiky.</h1>
           <p className={`${heroStyles["c-hero-subtitle"]}`}>
             Jsem nadšená fotografka na začátku své kariéry, vášnivě zamilovaná

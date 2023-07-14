@@ -2,27 +2,27 @@
   "services": [
     {
       "title": "Parové focení",
-      "description": "Zachyťte a sdílejte lásku a spojení s romantickým parovým focením, které přesně vyjadřuje váš vztah.",
+      "description": "Párové focení je skvělý způsob, jak zachytit a sdílet speciální okamžiky ve vašem vztahu.",
       "imagePath": "/images/services/compressed/images/parove_foceni.webp",
-      "price": "2000 Kč"
+      "price": "2000 Kč (10 fotek upravených v elektronické podobě) + každá další 100 Kč"
     },
     {
       "title": "Těhotenské focení",
-      "description": "Zvěčněte krásu a sílu těhotenství prostřednictvím těhotenského focení.",
+      "description": "Je to úžasný nápad, jak zachytit krásu a radost, kterou těhotenství přináší.",
       "imagePath": "/images/services/compressed/images/tehotenske_foceni.webp",
-      "price": "2500 Kč"
+      "price": "Cena: 2000 Kč (10 fotek upravených v elektronické podobě) + každá další 100 Kč"
     },
     {
       "title": "Rodiné focení",
-      "description": "Zachyťte drahocenné momenty a vztahy uvnitř rodiny s rodinným focením.",
+      "description": "Rodinné focení je výborný způsob, jak zachytit lásku, spojení a vzpomínky s vaší rodinou.",
       "imagePath": "/images/services/compressed/images/rodine_foceni.webp",
-      "price": "3000 Kč"
+      "price": "2000 Kč (10 fotek upravených v elektronické podobě) + každá další 100 Kč"
     },
     {
       "title": "Portréty",
-      "description": "Zachyťte jedinečnost a výraz jednotlivců s profesionálními portrétními fotografiemi.",
+      "description": "Portrétní focení je uměním zachycovat jedinečnost a osobnost člověka na fotografiích.",
       "imagePath": "/images/services/compressed/images/portret.webp",
-      "price": "1500 Kč"
+      "price": "12000 Kč (10 fotek upravených v elektronické podobě) + každá další 100 Kč"
     }
   ]
 }

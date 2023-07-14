@@ -5,8 +5,6 @@
 }
 
 html {
-  scroll-behavior: smooth !important;
-  background-attachment: fixed;
   height: 100%;
 }
 
@@ -57,6 +55,8 @@ a {
 }
 
 .content {
+  scroll-behavior: smooth !important;
+
   overflow: auto;
   background: linear-gradient(
     135deg,

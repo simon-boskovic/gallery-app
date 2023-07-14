@@ -3,24 +3,22 @@ import ContactForm from "./contact-form";
 
 export default function Contact() {
   return (
-    <div className={styles["c-contact-section-wrapper"]}>
-      {/* <div className={styles["c-contact-left"]}>
-        <div className={styles["c-contact-image"]}>
-          <img src="/images/hero/compressed/images/hero-image.webp" alt="" />
+    <div>
+      <div className={styles["c-contact-section-wrapper"]}>
+        <h2>Kontakt</h2>
+        <div className={styles["c-contact-section-text"]}>
+          <span>
+            Ráda se spojím s Vámi a dozvím se více o vašich představách a
+            očekáváních. Nezáleží na tom, zda plánujete focení pro sebe, svou
+            rodinu, nebo potřebujete portréty, budu ráda, pokud mi pošlete
+            zprávu. Využijte níže uvedený formulář pro zaslání svého jména,
+            e-mailu, telefonního čísla a zprávy. Ozvu se vám co nejdříve!
+          </span>
         </div>
-        <h2>Feel inspired?</h2>
-        <div>
-          <p className={styles["c-contact-text"]}>
-            Lets connect! Id love hear about your story and how I might be able
-            to help through photography.
-          </p>
+
+        <div className={styles["c-contact-form"]}>
+          <ContactForm></ContactForm>
         </div>
-        <button className={styles["c-contact-button"]}>
-          <span>Email me</span>
-        </button>
-      </div> */}
-      <div className={styles["c-contact-right"]}>
-        <ContactForm></ContactForm>
       </div>
     </div>
   );

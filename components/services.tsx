@@ -8,7 +8,7 @@ export default function Services(props) {
       <div className={styles["c-services-wrapper"]}>
         {services.map((service, index) => (
           <div key={index} className={styles["c-service"]}>
-            <h3>{service.title}</h3>
+            <h3 className={styles["c-service-title"]}>{service.title}</h3>
             <div className={styles["c-card"]}>
               <img
                 src={service.imagePath}
@@ -25,6 +25,29 @@ export default function Services(props) {
             </div>
           </div>
         ))}
+      </div>
+      <div className={styles["c-service-info-wrapper"]}>
+        <h3>Informace k focení</h3>
+        <ul>
+          <li>Fotografie si vybíráte sami ze zaslaných náhledů</li>
+          <li>
+            Je zakázáno zveřejňovat zaslané náhledy fotografií s vodotiskem
+            ještě před jejich úpravou
+          </li>
+          <li>Focení trvá většinou 1 - 1,5 hodiny (individuální)</li>
+          <li>
+            Dodací lhůta: náhledy posílám do dvou dnů, upravené fotografie do 14
+            – ti dnů, v případě nemoci nebo dovolené se termín může PRODLOUŽIT
+          </li>
+          <li>
+            Na focení si stačí vzít 1-2 outfity, oblečte se tak, aby to bylo
+            příjemné Vám
+          </li>
+          <li>
+            Při focení vypadá dobře jednobarevné oblečení – super jsou pastelové
+            barvy
+          </li>
+        </ul>
       </div>
     </div>
   );
