@@ -38,6 +38,18 @@
   display: flex;
 }
 
+@media (max-width: 768px) {
+  .c-about-images {
+    gap: 0.5rem;
+  }
+  .c-about-top-image {
+    transform: rotate(0);
+  }
+  .c-about-bottom-image {
+    transform: rotate(0);
+  }
+}
+
 @media (min-width: 1050px) {
   .c-about-section-wrapper {
     flex-direction: row;

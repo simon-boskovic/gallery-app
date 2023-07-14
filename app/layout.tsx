@@ -1,9 +1,8 @@
-import { Metadata } from "next";
+import { Poppins } from "next/font/google";
+import Head from "next/head";
 import Footer from "../components/footer";
 import NavBar from "../components/nav-bar";
 import "../styles/globals.css";
-import { Poppins } from "next/font/google";
-import Head from "next/head";
 
 const poppins = Poppins({ subsets: ["devanagari"], weight: "400" });
 
@@ -23,12 +22,15 @@ export default function RootLayout({
           display: "flex",
           flexDirection: "column",
           height: "100%",
+          overflow: "hidden",
           justifyContent: "space-between",
         }}
       >
-        <NavBar></NavBar>
-        {children}
-        <Footer></Footer>
+        <div className="content">
+          <NavBar></NavBar>
+          {children}
+          <Footer></Footer>
+        </div>
       </body>
     </html>
   );
