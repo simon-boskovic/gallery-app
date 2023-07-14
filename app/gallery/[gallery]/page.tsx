@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import getFileStructure from "../../../components/ffmpeg";
-import Footer from "../../../components/footer";
 import GalleryGrid from "../../../components/gallery/gallery-grid";
 import styles from "../../../styles/Gallery.module.scss";
 import fsp from "fs/promises";

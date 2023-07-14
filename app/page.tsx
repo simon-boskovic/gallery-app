@@ -7,8 +7,6 @@ import Hero from "../components/hero";
 import Portoflio from "../components/portfolio/portfolio";
 import getFileStructure from "../components/ffmpeg";
 import Services from "../components/services";
-import EventList from "../components/events/event-list";
-import Footer from "../components/footer";
 import { Metadata } from "next";
 
 async function getHeroData() {

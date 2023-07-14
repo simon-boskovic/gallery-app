@@ -72,7 +72,7 @@
 }
 
 .c-hero-subtitle {
-  color: white;
+  margin-top: 0.5rem;
 }
 
 .c-hero-image-wrapper {
@@ -90,5 +90,9 @@
     width: 100%;
     max-width: 1360px;
     margin: auto;
+  }
+
+  .c-hero-subtitle {
+    margin-top: 2rem;
   }
 }

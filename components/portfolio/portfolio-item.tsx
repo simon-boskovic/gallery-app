@@ -2,7 +2,6 @@ import { useState } from "react";
 import styles from "../../styles/Portfolio.module.scss";
 import FsLightbox from "fslightbox-react";
 import PortfolioItemImage from "./portfolio-item-image";
-import Link from "next/link";
 
 export default function PortfolioItem(props) {
   const { portfolioItem } = props;
