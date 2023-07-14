@@ -18,10 +18,18 @@ export default function AboutMe(props) {
       </div>
       <div className={styles["c-about-images"]}>
         <div className={styles["c-about-top-image"]}>
-          <img src={imagePaths[0].image} alt="" />
+          <img
+            src={imagePaths[0].image}
+            alt="Obrázek autora 1"
+            loading="lazy"
+          />
         </div>
         <div className={styles["c-about-bottom-image"]}>
-          <img src={imagePaths[1].image} alt="" />
+          <img
+            src={imagePaths[1].image}
+            alt="Obrázek autora 2"
+            loading="lazy"
+          />
         </div>
       </div>
     </div>

@@ -10,6 +10,7 @@ export default function FooterLink({
 }) {
   return (
     <img
+      loading="lazy"
       src={imgUrl}
       alt={description}
       onClick={() => window.open(redirectUrl, "_blank")}

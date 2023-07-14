@@ -51,6 +51,7 @@ export default function PortfolioItemImage(props) {
         src={image}
         className={`${styles["c-portfolio-image"]}`}
         style={{ height: imageHeight + "px" }}
+        alt="Obrázek z galerie"
       />
       <div
         className={`${styles["c-portfolio-image-overlay"]} ${

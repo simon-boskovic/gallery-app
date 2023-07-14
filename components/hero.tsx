@@ -45,7 +45,7 @@ export default function Hero(props) {
         <div className={heroStyles["c-hero-image-wrapper"]}>
           <img
             src={imagePath}
-            alt="Image"
+            alt="Hlavní obrázek"
             ref={imgRef}
             className={`${heroStyles["c-hero-image"]} ${
               isImageLoaded ? heroStyles["c-hero-image--loaded"] : ""
