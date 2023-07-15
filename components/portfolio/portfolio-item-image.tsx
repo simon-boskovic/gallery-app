@@ -60,13 +60,14 @@ export default function PortfolioItemImage(props) {
         onMouseEnter={(el) => setIsHovered(true)}
         onMouseLeave={(el) => setIsHovered(false)}
         onClick={(ev) => {
+          ev.preventDefault();
           setImageIndex(index);
           setToggler(toggler);
           setIsHovered(false);
         }}
       >
         <button className={`${styles["c-portfolio-image-view-text"]}`}>
-          View
+          Zobrazit
         </button>
       </div>
     </div>

@@ -142,7 +142,7 @@ export default function ContactForm() {
                 checked={services.includes("Parové focení")}
                 onChange={handleServiceChange}
               />
-              <label htmlFor="parove_foceni">Parové focení</label>
+              <label htmlFor="parove_foceni">Párové focení</label>
             </div>
             <div className={styles["c-field-input-wrapper"]}>
               <input
@@ -162,7 +162,7 @@ export default function ContactForm() {
                 checked={services.includes("Rodiné focení")}
                 onChange={handleServiceChange}
               />
-              <label htmlFor="rodine_foceni">Rodiné focení</label>
+              <label htmlFor="rodine_foceni">Rodinné focení</label>
             </div>
             <div className={styles["c-field-input-wrapper"]}>
               <input

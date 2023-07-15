@@ -12,7 +12,7 @@ export default function Contact() {
             očekáváních. Nezáleží na tom, zda plánujete focení pro sebe, svou
             rodinu, nebo potřebujete portréty, budu ráda, pokud mi pošlete
             zprávu. Využijte níže uvedený formulář pro zaslání svého jména,
-            e-mailu, telefonního čísla a zprávy. Ozvu se vám co nejdříve!
+            e-mailu, telefonního čísla a zprávy. Ozvu se Vám co nejdříve!
           </span>
         </div>
 
