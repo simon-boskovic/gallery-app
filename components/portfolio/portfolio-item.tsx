@@ -56,7 +56,7 @@ export default function PortfolioItem(props) {
               : setMaxImagesCount(3)
           }
         >
-          {maxImagesCount === 3 ? "Rozbalit" : "Zbalit"}
+          {maxImagesCount === 3 ? "Rozbalit" : "Sbalit"}
         </button>
       </div>
       <FsLightbox

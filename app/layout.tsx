@@ -17,16 +17,7 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#9d0208" />
         <meta name="theme-color" content="#9d0208" />
       </Head>
-      <body
-        className={` ${poppins.className}`}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          height: "100%",
-          overflow: "hidden",
-          justifyContent: "space-between",
-        }}
-      >
+      <body className={` ${poppins.className}`}>
         <div className="content">
           <NavBar></NavBar>
           {children}

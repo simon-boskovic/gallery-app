@@ -15,6 +15,8 @@ export default function ContactForm() {
   const messageRef = useRef<HTMLTextAreaElement>(null);
   const [services, setServices] = useState<Service[]>([]);
 
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   const handleServiceChange = (event) => {
     const service = event.target.value as Service;
     if (event.target.checked) {
@@ -34,6 +36,11 @@ export default function ContactForm() {
       !messageRef.current?.value
     ) {
       alert("Nebyly vyplněny všechny údaje");
+      return;
+    }
+
+    if (!emailRegex.test(emailRef.current.value)) {
+      alert("Zadejte platnou e-mailovou adresu");
       return;
     }
 
@@ -78,9 +85,9 @@ export default function ContactForm() {
         <form onSubmit={handleSubmit}>
           <div className={styles["c-form-grid"]}>
             <div className={styles["c-grid-item"]}>
-              <div className={styles["c-grid-item-label"]}>
+              <label htmlFor="name" className={styles["c-grid-item-label"]}>
                 Jméno a příjmení
-              </div>
+              </label>
               <div className={styles["c-grid-item-wrap"]}>
                 <input
                   ref={nameRef}
@@ -93,7 +100,9 @@ export default function ContactForm() {
               </div>
             </div>
             <div className={styles["c-grid-item"]}>
-              <div className={styles["c-grid-item-label"]}>Email</div>
+              <label htmlFor="email" className={styles["c-grid-item-label"]}>
+                Email
+              </label>
               <div className={styles["c-grid-item-wrap"]}>
                 <input
                   ref={emailRef}
@@ -106,7 +115,9 @@ export default function ContactForm() {
               </div>
             </div>
             <div className={styles["c-grid-item"]}>
-              <div className={styles["c-grid-item-label"]}>Telefon</div>
+              <label htmlFor="phone" className={styles["c-grid-item-label"]}>
+                Telefon
+              </label>
               <div className={styles["c-grid-item-wrap"]}>
                 <input
                   ref={phoneRef}
@@ -119,7 +130,9 @@ export default function ContactForm() {
               </div>
             </div>
             <div className={styles["c-grid-item"]}>
-              <div className={styles["c-grid-item-label"]}>Zpráva</div>
+              <label htmlFor="message" className={styles["c-grid-item-label"]}>
+                Zpráva
+              </label>
               <div className={styles["c-grid-item-wrap"]}>
                 <textarea
                   ref={messageRef}

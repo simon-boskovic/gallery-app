@@ -13,50 +13,50 @@ button {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 3rem;
   font-weight: bold;
   color: white;
   line-height: 1.2;
 }
 
 h2 {
-  font-size: 2.5em;
+  font-size: 2.5rem;
   font-weight: bold;
   line-height: 1.3;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: bold;
   line-height: 1.4;
 }
 
 p {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   line-height: 1.2;
 }
+
 a {
   text-decoration: none;
   line-height: inherit;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   h1 {
-    font-size: 4.5em;
+    font-size: 4.5rem;
   }
 
   h2 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
   }
 
   h3 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 }
 
 .content {
   scroll-behavior: smooth !important;
-
   overflow: auto;
   background: linear-gradient(
     135deg,
@@ -73,26 +73,28 @@ a {
 }
 
 body {
-  color: white;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  justify-content: space-between;
+  color: white;
 }
 
-
-@media (max-width: 320px) {
+@media (max-width: 20rem) {
   h1 {
-    font-size: 2.2em;
+    font-size: 2.2rem;
   }
 
   h2 {
-    font-size: 1.7em;
+    font-size: 1.7rem;
   }
 
   h3 {
-    font-size: 1.2em;
+    font-size: 1.2rem;
   }
 
   p {
-    font-size: 1.2em;
+    font-size: 1.2rem;
   }
 }
