@@ -8,6 +8,7 @@ import Portoflio from "../components/portfolio/portfolio";
 import getFileStructure from "../components/ffmpeg";
 import Services from "../components/services";
 import { Metadata } from "next";
+import CustomerFeedback from "../components/customers-feedback/customers-feedback";
 
 async function getHeroData() {
   const relativeHeroImagePath = "/images/hero";
@@ -99,8 +100,12 @@ export default async function HomePage() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <section>
         <Hero imagePath={heroSectionData.image}></Hero>
+      </section>
+      <section>
+        <CustomerFeedback></CustomerFeedback>
       </section>
       <section id="portfolio">
         <Portoflio portfolioResult={portfolioSectionData}></Portoflio>
@@ -111,6 +116,7 @@ export default async function HomePage() {
       <section id="services">
         <Services services={servicesSectionData.services}></Services>
       </section>
+
       {/* <section id="event-list">
         <EventList></EventList>
       </section> */}

@@ -1,0 +1,83 @@
+.customer-feedback-container {
+  width: 100%;
+  max-width: 1360px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+.customer-feedback-heading {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.customer-feedback-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.customer-feedback-item {
+  width: 250px;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 15px;
+  margin: 10px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  position: relative; /* Přidáno pro relativní pozici */
+}
+
+.customer-feedback-item h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.customer-feedback-item p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  margin-top: 25px;
+  color: #fff;
+  position: relative; /* Přidáno pro relativní pozici */
+}
+
+.customer-feedback-item p::before,
+.customer-feedback-item p::after {
+  content: "";
+  position: absolute;
+  top: -15px; /* Upravit podle potřeby */
+  width: 30px;
+  height: 30px;
+  background-image: url("/images/customer-feedback/quote-left.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.customer-feedback-item p::after {
+  background-image: url("/images/customer-feedback/quote-right.png");
+  background-position: right;
+}
+
+.customer-feedback-author {
+  display: flex;
+  align-items: center;
+}
+
+.customer-feedback-author img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.customer-feedback-author span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.customer-feedback-content {
+}
