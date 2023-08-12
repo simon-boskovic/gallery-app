@@ -104,9 +104,9 @@ export default async function HomePage() {
       <section>
         <Hero imagePath={heroSectionData.image}></Hero>
       </section>
-      <section>
+      {/* <section>
         <CustomerFeedback></CustomerFeedback>
-      </section>
+      </section> */}
       <section id="portfolio">
         <Portoflio portfolioResult={portfolioSectionData}></Portoflio>
       </section>
