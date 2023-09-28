@@ -9,6 +9,7 @@ import getFileStructure from "../components/ffmpeg";
 import Services from "../components/services";
 import { Metadata } from "next";
 import CustomerFeedback from "../components/customers-feedback/customers-feedback";
+import EventList from "../components/events/event-list";
 
 async function getHeroData() {
   const relativeHeroImagePath = "/images/hero";
@@ -84,9 +85,14 @@ async function getAboutMeData() {
 }
 
 export const metadata: Metadata = {
-  title: "Michaela Malčíková - Umělecká Galerie",
+  title: "Michaela Malčíková - Umělecká Galerie | Zlín",
   description:
-    "Prohlédněte si nádherná umělecká díla Michaely Malčíkové v její online galerii. Obrazy plné emocí, barev a jedinečného vyjádření.",
+    "Prohlédněte si nádherná umělecká díla Michaely Malčíkové v její online galerii. Obrazy plné emocí, barev a jedinečného vyjádření. Fotografka z Zlínského kraje.",
+  keywords:
+    "Michaela Malčíková, umělecká galerie, Zlín, Zlínský kraj, fotografie, fotograf, fotografka",
+  authors: {
+    name: "Michaela Malčíková, umělecká fotografka ze Zlínského kraje",
+  },
 };
 
 export default async function HomePage() {
@@ -94,6 +100,7 @@ export default async function HomePage() {
   const portfolioSectionData = await getPortfolioData();
   const servicesSectionData = await getServicesData();
   const aboutMeSectionData = await getAboutMeData();
+
   return (
     <>
       <Head>

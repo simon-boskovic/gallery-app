@@ -13,7 +13,7 @@ export default function AboutMe(props) {
           poznávat i úžasné lidi. Mám ráda fotografie plné emocí. Nenutím
           klienty do strojených póz, chci zachytit jedinečnost okamžiku.
           Největší odměna pro mě je, když si focení užijete a odcházíte s
-          pocitem, že jste strávili příjemný čas se svými nejbližšími
+          pocitem, že jste strávili příjemný čas se svými nejbližšími.
         </p>
       </div>
       <div className={styles["c-about-images"]}>

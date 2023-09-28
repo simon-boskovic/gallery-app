@@ -67,16 +67,16 @@ export default function Navbar() {
               isMenuOpen ? "" : navigationStyles["c-menu-navigation--closed"]
             }`}
           >
-            <Link href="/#portfolio" scroll={false} passHref>
+            <Link href="/#portfolio" scroll={true} passHref>
               <div onClick={() => setIsMenuOpen(false)}>Portfolio</div>
             </Link>
-            <Link href="/#about-me" scroll={false} passHref>
+            <Link href="/#about-me" scroll={true} passHref>
               <div onClick={() => setIsMenuOpen(false)}>O mě</div>
             </Link>
-            <Link href="/#services" scroll={false} passHref>
+            <Link href="/#services" scroll={true} passHref>
               <div onClick={() => setIsMenuOpen(false)}>Služby</div>
             </Link>
-            <Link href="/#contact" scroll={false} passHref>
+            <Link href="/#contact" scroll={true} passHref>
               <div onClick={() => setIsMenuOpen(false)}>Kontakt</div>
             </Link>
           </div>

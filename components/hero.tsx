@@ -35,7 +35,7 @@ export default function Hero(props) {
           </p>
           <Link
             href="#portfolio"
-            scroll={false}
+            scroll={true}
             className={`${heroStyles["c-button-wrapper"]}`}
           >
             <div>Ukázka</div>
