@@ -7,7 +7,7 @@ import Hero from "../components/hero";
 import Portoflio from "../components/portfolio/portfolio";
 import getFileStructure from "../components/ffmpeg";
 import Services from "../components/services";
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 import CustomerFeedback from "../components/customers-feedback/customers-feedback";
 import EventList from "../components/events/event-list";
 
@@ -84,14 +84,46 @@ async function getAboutMeData() {
   );
 }
 
+export const viewport: Viewport = {
+  themeColor: "#b20105",
+};
+
 export const metadata: Metadata = {
-  title: "Michaela Malčíková - Umělecká Galerie | Zlín",
+  metadataBase: new URL("https://malcikova-photo.cz"),
+  title: "Michaela Malčíková - Fotografka | Zlín",
   description:
-    "Prohlédněte si nádherná umělecká díla Michaely Malčíkové v její online galerii. Obrazy plné emocí, barev a jedinečného vyjádření. Fotografka z Zlínského kraje.",
-  keywords:
-    "Michaela Malčíková, umělecká galerie, Zlín, Zlínský kraj, fotografie, fotograf, fotografka",
+    "Fotografka ze Zlína. Nabízí těhotenské, párové, rodinné a portrétové focení. Prohlédněte si nádherná umělecká díla Michaely Malčíkové v její online galerii. Obrazy plné emocí, barev a jedinečného vyjádření",
+  keywords: [
+    "Michaela Malčíková",
+    "umělecká galerie",
+    "fotografka Zlín",
+    "fotograf Zlín",
+    "Zlínský kraj",
+    "fotografie",
+    "fotograf",
+    "fotografka",
+    "těhotenské focení",
+    "párové focení",
+    "rodinné focení",
+    "portréty",
+  ],
   authors: {
     name: "Michaela Malčíková, umělecká fotografka ze Zlínského kraje",
+  },
+  creator: "Šimon Boškovič",
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: true,
+    },
+  },
+  openGraph: {
+    url: "https://malcikova-photo.cz/opengraph-image.png",
+    images: "/opengraph-image.png",
   },
 };
 

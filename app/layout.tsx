@@ -12,10 +12,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="cs">
       <Head>
         <meta name="msapplication-TileColor" content="#9d0208" />
         <meta name="theme-color" content="#9d0208" />
+        <meta
+          property="og:image"
+          content="https://malcikova-photo.cz/opengraph-image.png"
+        />
       </Head>
       <body className={` ${poppins.className}`}>
         <div className="content">
