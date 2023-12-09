@@ -22,6 +22,44 @@ export default function RootLayout({
         />
       </Head>
       <body className={` ${poppins.className}`}>
+        <div className="snowflakes" aria-hidden="true">
+          <div className="snowflake">
+            <div className="inner">❅</div>
+          </div>
+          <div className="snowflake">
+            <div className="inner">❅</div>
+          </div>
+          <div className="snowflake">
+            <div className="inner">❅</div>
+          </div>
+          <div className="snowflake">
+            <div className="inner">❅</div>
+          </div>
+          <div className="snowflake">
+            <div className="inner">❅</div>
+          </div>
+          <div className="snowflake">
+            <div className="inner">❅</div>
+          </div>
+          <div className="snowflake">
+            <div className="inner">❅</div>
+          </div>
+          <div className="snowflake">
+            <div className="inner">❅</div>
+          </div>
+          <div className="snowflake">
+            <div className="inner">❅</div>
+          </div>
+          <div className="snowflake">
+            <div className="inner">❅</div>
+          </div>
+          <div className="snowflake">
+            <div className="inner">❅</div>
+          </div>
+          <div className="snowflake">
+            <div className="inner">❅</div>
+          </div>
+        </div>
         <div className="content">
           <NavBar></NavBar>
           {children}

@@ -30,18 +30,18 @@ const getPortfolioGalleryRoutes = async () => {
 };
 
 export default async function sitemap() {
-  const cancellationEventsRoutes = await generateDynamicRoutes(
-    "https://malcikova-photo.cz/api/events.php",
-    "event-cancellation",
-    "id"
-  );
-  const reservationEventsRoutes = await generateDynamicRoutes(
-    "https://malcikova-photo.cz/api/events.php",
-    "event-reservation",
-    "id"
-  );
+  // const cancellationEventsRoutes = await generateDynamicRoutes(
+  //   "https://malcikova-photo.cz/api/events.php",
+  //   "event-cancellation",
+  //   "id"
+  // );
+  // const reservationEventsRoutes = await generateDynamicRoutes(
+  //   "https://malcikova-photo.cz/api/events.php",
+  //   "event-reservation",
+  //   "id"
+  // );
 
-  const portfolioRoutes = await getPortfolioGalleryRoutes();
+  // const portfolioRoutes = await getPortfolioGalleryRoutes();
 
   const homepageRoute = {
     url: `${WEB_URL}`,
@@ -50,8 +50,8 @@ export default async function sitemap() {
 
   return [
     homepageRoute,
-    ...cancellationEventsRoutes,
-    ...reservationEventsRoutes,
-    ...portfolioRoutes,
+    // ...cancellationEventsRoutes,
+    // ...reservationEventsRoutes,
+    // ...portfolioRoutes,
   ];
 }

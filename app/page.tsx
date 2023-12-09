@@ -122,7 +122,6 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    url: "https://malcikova-photo.cz/opengraph-image.png",
     images: "/opengraph-image.png",
   },
 };

@@ -23,7 +23,7 @@ export default function Navbar() {
     if (isScrolled) {
       navbar!.style.top = "0";
     } else {
-      navbar!.style.top = "40px";
+      navbar!.style.top = "30px";
     }
   }, [isScrolled]);
 
@@ -67,17 +67,37 @@ export default function Navbar() {
               isMenuOpen ? "" : navigationStyles["c-menu-navigation--closed"]
             }`}
           >
-            <Link href="/#portfolio" scroll={true} passHref>
-              <div onClick={() => setIsMenuOpen(false)}>Portfolio</div>
+            <Link
+              href="/#portfolio"
+              scroll={true}
+              passHref
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Portfolio
             </Link>
-            <Link href="/#about-me" scroll={true} passHref>
-              <div onClick={() => setIsMenuOpen(false)}>O mě</div>
+            <Link
+              href="/#about-me"
+              scroll={true}
+              passHref
+              onClick={() => setIsMenuOpen(false)}
+            >
+              O mě
             </Link>
-            <Link href="/#services" scroll={true} passHref>
-              <div onClick={() => setIsMenuOpen(false)}>Služby</div>
+            <Link
+              href="/#services"
+              scroll={true}
+              passHref
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Služby
             </Link>
-            <Link href="/#contact" scroll={true} passHref>
-              <div onClick={() => setIsMenuOpen(false)}>Kontakt</div>
+            <Link
+              href="/#contact"
+              scroll={true}
+              passHref
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Kontakt
             </Link>
           </div>
         </div>
