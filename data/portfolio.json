@@ -1,6 +1,11 @@
 {
   "portfolio": [
     {
+      "title": "Vánoční focení",
+      "imagesPath": "vanocni-foceni",
+      "pageTitle": "Vánoční focení"
+    },
+    {
       "title": "Těhotenské focení",
       "imagesPath": "tehotenske-foceni",
       "pageTitle": "Těhotenské focení"

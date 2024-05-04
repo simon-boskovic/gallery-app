@@ -188,6 +188,9 @@ export default function ContactForm() {
               <label htmlFor="portrety">Portréty</label>
             </div>
           </div>
+          <div className={styles["c-field-gdpr"]}>
+            *Vaše osobní data používáme jen pro odpovědi a neuchováváme je.
+          </div>
           <div className={styles["c-submit-wrapper"]}>
             <button className={styles["c-submit-btn"]} type="submit">
               Odeslat

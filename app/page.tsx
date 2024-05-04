@@ -90,14 +90,15 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://malcikova-photo.cz"),
-  title: "Michaela Malčíková - Fotografka | Zlín",
-  description:
-    "Fotografka ze Zlína. Nabízí těhotenské, párové, rodinné a portrétové focení. Prohlédněte si nádherná umělecká díla Michaely Malčíkové v její online galerii. Obrazy plné emocí, barev a jedinečného vyjádření",
+  title: "Michaela Malčíková - Fotografka | Zlín | Focení Zlín",
+  description: `Fotografka ze Zlína. Nabízí těhotenské, párové, rodinné a portrétové focení.
+   Prohlédněte si nádherná umělecká díla Michaely Malčíkové v její online galerii. 
+   Obrazy plné emocí, barev a jedinečného vyjádření. Focení Zlín`,
   keywords: [
-    "Michaela Malčíková",
-    "umělecká galerie",
     "fotografka Zlín",
     "fotograf Zlín",
+    "focení Zlín",
+    "foto Zlín",
     "Zlínský kraj",
     "fotografie",
     "fotograf",
@@ -106,6 +107,7 @@ export const metadata: Metadata = {
     "párové focení",
     "rodinné focení",
     "portréty",
+    "Zlín",
   ],
   authors: {
     name: "Michaela Malčíková, umělecká fotografka ze Zlínského kraje",
