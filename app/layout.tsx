@@ -4,7 +4,7 @@ import Footer from "../components/footer";
 import NavBar from "../components/nav-bar";
 import "../styles/globals.css";
 
-const poppins = Poppins({ subsets: ["devanagari"], weight: "400" });
+const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
 export default function RootLayout({
   children,
