@@ -1,15 +1,13 @@
 import fs from "fs/promises";
+import { Metadata, Viewport } from "next";
 import Head from "next/head";
 import path from "path";
 import AboutMe from "../components/about-me";
 import Contact from "../components/contact";
+import getFileStructure from "../components/ffmpeg";
 import Hero from "../components/hero";
 import Portoflio from "../components/portfolio/portfolio";
-import getFileStructure from "../components/ffmpeg";
 import Services from "../components/services";
-import { Metadata, Viewport } from "next";
-import CustomerFeedback from "../components/customers-feedback/customers-feedback";
-import EventList from "../components/events/event-list";
 
 async function getHeroData() {
   const relativeHeroImagePath = "/images/hero";
@@ -90,7 +88,10 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://malcikova-photo.cz"),
-  title: "Michaela Malčíková - Fotografka | Zlín | Focení Zlín",
+  alternates: {
+    canonical: "/",
+  },
+  title: "Michaela Malčíková - Fotografka | Focení Zlín | Zlín",
   description: `Fotografka ze Zlína. Nabízí těhotenské, párové, rodinné a portrétové focení.
    Prohlédněte si nádherná umělecká díla Michaely Malčíkové v její online galerii. 
    Obrazy plné emocí, barev a jedinečného vyjádření. Focení Zlín`,
@@ -101,6 +102,8 @@ export const metadata: Metadata = {
     "foto Zlín",
     "Zlínský kraj",
     "fotografie",
+    "vánoční focení",
+    "vánoční focení zlín",
     "fotograf",
     "fotografka",
     "těhotenské focení",
