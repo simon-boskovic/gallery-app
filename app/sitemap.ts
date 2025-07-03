@@ -3,6 +3,8 @@ import path from "path";
 
 const WEB_URL = "https://malcikova-photo.cz";
 
+export const dynamic = "force-static";
+
 const generateDynamicRoutes = async (
   fetchURL: string,
   webPath: string,

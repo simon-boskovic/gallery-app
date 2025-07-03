@@ -91,10 +91,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  title: "Michaela Malčíková - Fotografka | Focení Zlín | Zlín",
-  description: `Fotografka ze Zlína. Nabízí těhotenské, párové, rodinné a portrétové focení.
-   Prohlédněte si nádherná umělecká díla Michaely Malčíkové v její online galerii. 
-   Obrazy plné emocí, barev a jedinečného vyjádření. Focení Zlín`,
+  title: "Profesionální Fotografka Zlín | Michaela Malčíková | Rodinné & Těhotenské Focení",
+  description: `Hledáte fotografku ve Zlíně pro přirozené rodinné, těhotenské či párové focení? Jmenuji se Michaela Malčíková a s citem zachytím vaše jedinečné okamžiky. Prohlédněte si mé portfolio.`,
   keywords: [
     "fotografka Zlín",
     "fotograf Zlín",
@@ -119,11 +117,9 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    nocache: true,
     googleBot: {
       index: true,
       follow: true,
-      noimageindex: true,
     },
   },
   openGraph: {

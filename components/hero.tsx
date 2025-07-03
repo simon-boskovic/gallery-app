@@ -1,8 +1,8 @@
 "use client";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import heroStyles from "../styles/Hero.module.scss";
 import styles from "../styles/HomePage.module.scss";
-import Link from "next/link";
 
 export default function Hero(props) {
   const { imagePath } = props;
@@ -27,7 +27,8 @@ export default function Hero(props) {
             isImageLoaded ? heroStyles["c-hero-content--loaded"] : ""
           }`}
         >
-          <h1>Ráda zachycuji Vaše nejkrásnější okamžiky.</h1>
+          <h1>Fotografka Michaela Malčíková: Vaše Přirozené Rodinné a Těhotenské Focení ve Zlíně</h1>
+          {/* <h2>Ráda zachycuji Vaše nejkrásnější okamžiky.</h2> */}
           <p className={`${heroStyles["c-hero-subtitle"]}`}>
             Jsem nadšená fotografka na začátku své kariéry, vášnivě zamilovaná
             do svého řemesla. Bude pro mě velkou ctí zachytit pro Vás
@@ -45,7 +46,7 @@ export default function Hero(props) {
         <div className={heroStyles["c-hero-image-wrapper"]}>
           <img
             src={imagePath}
-            alt="Hlavní obrázek"
+            alt="Profesionální fotografka Michaela Malčíková při práci ve Zlíně"
             ref={imgRef}
             className={`${heroStyles["c-hero-image"]} ${
               isImageLoaded ? heroStyles["c-hero-image--loaded"] : ""

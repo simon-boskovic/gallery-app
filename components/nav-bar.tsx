@@ -39,7 +39,7 @@ export default function Navbar() {
           <div className={`${navigationStyles["c-logo-wrapper"]}`}>
             <img
               src="/images/logo/logo.png"
-              alt="Image"
+              alt="Logo Michaela Malčíková - Fotografka Zlín"
               className={`${navigationStyles["c-logo"]}`}
             />
           </div>
