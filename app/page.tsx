@@ -91,8 +91,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  title: "Profesionální Fotografka Zlín | Michaela Malčíková | Rodinné & Těhotenské Focení",
-  description: `Hledáte fotografku ve Zlíně pro přirozené rodinné, těhotenské či párové focení? Jmenuji se Michaela Malčíková a s citem zachytím vaše jedinečné okamžiky. Prohlédněte si mé portfolio.`,
+  title: "Fotografka Zlín | Michaela Malčíková | Rodinné a těhotenské foto",
+  description: `Hledáte přirozené rodinné nebo těhotenské fotky ve Zlíně a okolí? Jsem Michaela Malčíková a zachytím vaše nejkrásnější emoce. Podívejte se na ceník a napište mi přes kontaktní formulář.`,
   keywords: [
     "fotografka Zlín",
     "fotograf Zlín",

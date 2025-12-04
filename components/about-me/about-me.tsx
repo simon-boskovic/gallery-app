@@ -5,7 +5,7 @@ export default function AboutMe(props) {
   return (
     <div className={styles["c-about-section-wrapper"]}>
       <div className={styles["c-about-text-wrapper"]}>
-        <h2> Ahoj, jmenuji se Michaela</h2>
+       <h2> O mně – Vaše fotografka ve Zlíně</h2>
         <h3 className={styles["c-about-subtitle"]}></h3>
         <p className={styles["c-about-text"]}>
           Zjistila jsem, že fotografování je krásná práce, při které mohu

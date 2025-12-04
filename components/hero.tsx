@@ -27,7 +27,7 @@ export default function Hero(props) {
             isImageLoaded ? heroStyles["c-hero-content--loaded"] : ""
           }`}
         >
-          <h1>Fotografka Michaela Malčíková: Vaše Přirozené Rodinné a Těhotenské Focení ve Zlíně</h1>
+          <h1>Profesionální fotografka Zlín – rodinné a párové focení</h1>
           {/* <h2>Ráda zachycuji Vaše nejkrásnější okamžiky.</h2> */}
           <p className={`${heroStyles["c-hero-subtitle"]}`}>
             Jsem nadšená fotografka na začátku své kariéry, vášnivě zamilovaná

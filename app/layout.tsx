@@ -13,7 +13,7 @@ export default function RootLayout({
   return (
     <html lang="cs">
       <body className={` ${poppins.className}`}>
-        {/* <div className="snowflakes" aria-hidden="true">
+        <div className="snowflakes" aria-hidden="true">
           <div className="snowflake">
             <div className="inner">❅</div>
           </div>
@@ -50,7 +50,7 @@ export default function RootLayout({
           <div className="snowflake">
             <div className="inner">❅</div>
           </div>
-        </div> */}
+        </div>
         <div className="content">
           <NavBar></NavBar>
           {children}

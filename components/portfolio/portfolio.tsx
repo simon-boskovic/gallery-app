@@ -8,7 +8,7 @@ export default function Portoflio(props) {
 
   return (
     <div className={`${styles["c-portfolio-wrapper"]}`}>
-      <h2>Moje práce</h2>
+      <h2>Moje fotografické portfolio</h2>
       <p className={`${styles["c-portfolio-description"]}`}>
         Moje fotografická cesta je oživena radostí z párových a těhotenských
         fotografií, stejně jako z portrétů, které pomáhají lidem zachovat vzácné

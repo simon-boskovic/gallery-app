@@ -4,7 +4,7 @@ export default function Services(props) {
 
   return (
     <div className={styles["c-services-section-wrapper"]}>
-      <h2 className={styles["c-services-heading"]}>Služby</h2>
+      <h2 className={styles["c-services-heading"]}>Nabízené fotografické služby a ceník</h2>
       <div className={styles["c-services-wrapper"]}>
         {services.map((service, index) => (
           <div key={index} className={styles["c-service"]}>
